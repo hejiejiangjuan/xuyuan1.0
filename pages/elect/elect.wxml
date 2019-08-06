@@ -1,0 +1,40 @@
+<!--pages/elect/elect.wxml-->
+<view class='electctent'>
+  <view class='electtop'>
+    <text class='xuazexiyna'>请选择你的心愿类型</text>
+    <text class='shixuansa'>越精准与有可能实现哦</text>
+  </view>
+  <view class='electcentview'>
+    <view class='elelistsless' wx:for="{{hatred}}" wx:key="item" >
+      <!-- <view class='eleimg'>
+        <image class='eleicon' src='{{fileServer+item.name.icon}}'></image>
+      </view> -->
+      <view class='ele-sachua' >
+        <text class='sachua' bindtap='gunbi' id="{{item.name.id}}" >x</text> {{item.name.wishName}}</view>
+    </view>
+  </view>
+  <view class='elelist'>
+    <view class='listelestaiqing' wx:for="{{list}}" wx:key="item" data-name='{{item}}' bindtap='showRule'>
+      <!-- <view class='listelestaiqing-eleimg'>
+        <image class='listelestaiqing-icon' src='{{fileServer+item.icon}}'></image>
+      </view> -->
+      <text>{{item.wishName}}</text>
+    </view>
+    <!-- <text eletj-viewtiian>+</text> -->
+    <view class="listelestaiqing {{isShow? 'show':''}}">
+      <!-- <view class='listelestaiqing-eleimg viewtiianjia-img'>
+        +
+      </view> -->
+      <text class='eletianjia-text' catchtap='eleZdingyi'>自定义</text>
+    </view>
+    <view class="listelestaiqing {{isShow? '':'show'}}">
+      <view class='listelestaiqing-zidingyi'>
+        <!-- <view class='listelestaiqing-eleimg viewtiianjia-img'>
+          <image src=''></image>
+        </view> -->
+        <input class='eletianjia-input' id="0" focus="true" bindblur='bindblurinput' placeholder='4个字内' maxlength='4'></input>
+      </view>
+    </view>
+  </view>
+  <button class='elebtnse' bindtap='btnqued'>确定</button>
+</view>

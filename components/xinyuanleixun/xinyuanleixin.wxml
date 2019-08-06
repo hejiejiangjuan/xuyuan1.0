@@ -1,0 +1,35 @@
+<!--components/xinyuanleixun/xinyuanleixin.wxml-->
+<view class='active-xuanzexinyuan'>
+    <view class='xuanzexinyuantop'>
+      <view class='xuanzexinyuantop-legt'>选择心愿类型</view>
+      <view class='xuanzexinyuantop-right'>
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <!-- <view id="{{index}}" class="shiwu {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class=''>{{item}}</view>
+          </view> -->
+          <view id="{{index}}" class="shiwu" bindtap="tabClick">
+            <view class=''>{{item}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view hidden="{{activeIndex != 0}}">
+      <view class='xuanzesdf'>
+        <view class='leftimglove'>
+          <image class='img-aming' src='/assets/img/neirong/sanchu.png'  bindtap='componentDele'></image>
+          <image class='xuanzeinmg1' src='{{compontele.name.img}}'></image>
+          <text class='xuanzelove'>{{compontele.name.name}}</text>
+        </view>
+        <image class='xuanzeinmg' src='../../assets/img/neirong/touxiang.png' bindtap='componentEle'></image>
+      </view>
+      <view class='jiangpinmingc'>
+        <view class='shurujiangpoing'>心愿奖品名称</view>
+        <input class='iontxinyuanjiang' placeholder='请输入心愿奖品名称'></input>
+      </view>
+      <view class='jiangpinnauber'>
+        <view class='jiangpinnauber2'>奖品数量</view>
+        <input class='jiangpinnauber3' placeholder='请输入心愿奖品数量'></input>
+      </view>
+    </view>
+    <!-- <view hidden="{{activeIndex != 1}}">选项二的内容</view> -->
+  </view>

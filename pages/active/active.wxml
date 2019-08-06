@@ -1,0 +1,341 @@
+<!--pages/active/active.wxml-->
+<view class='active'>
+  <view class="gallery">
+    <view class='replaceImg' bindtap="chooseImage">
+      <view class='iconImg'>
+        <image style='width: 40rpx;height: 40rpx;' src='/assets/img/neirong/car.png'></image>
+      </view>
+      <view>更换图片</view>
+    </view>
+    <view class='item-ot'>
+      <view class="item">
+        <!-- 添加按钮 -->
+        <view class="addIcon" wx:if="{{imgBoolean}}">
+          <view class='bgImg'>
+            <image src="/assets/img/neirong/bg.jpg" mode="aspectFit" data-src="{{fileServer+theme_addr}}" mode="aspectFill" />
+          </view>
+
+        </view>
+        <!-- 上传的图 -->
+        <view class='itemImg' wx:if="{{!imgBoolean}}">
+          <image src="{{fileServer+theme_addr}}" mode="aspectFit" data-src="{{fileServer+theme_addr}}" bindtap="previewImage" mode="aspectFill" />
+          <!-- 删除按钮 -->
+          <view class="delete" bindtap="deleteImg" data-index="{{index}}">X</view>
+        </view>
+        <!-- <view class='boxStyle'></view> -->
+      </view>
+    </view>
+  </view>
+  <view class='activezhuti-top'>
+    <view class='tophuodongzhuti'>
+      <view class='huodong-active'>
+        <view class='activehuodongzhuti'>活动主题</view>
+
+      </view>
+      <view class='huodong-active'>
+        <input class='zhutishuru' placeholder='请输入活动主题' maxlength='25' bindinput='ActivityThemeInput' value='{{activity_theme}}'></input>
+      </view>
+      <view class='huodong-active'>
+        <view class='activehuodongzhuti'>创意说明</view>
+
+      </view>
+      <view class='huodong-active'>
+        <input class='zhutishuru' maxlength='30' placeholder='限30字以内' bindinput='creativityExplainInput' value='{{creativity_explain}}'></input>
+      </view>
+
+      <!-- <view class='huodongzhuti'>
+        <view class='phonenumber'>输入手机号</view>
+      </view> -->
+      <view class='phone'>
+        <input class='phone-zhutishuru' maxlength='30' placeholder='请输入电话号码' bindblur='blurPone' bindinput='phoneInput' value='{{phone}}'></input>
+        <view class='huoquyanzen' catchtap='huoquCode' wx:if="{{state==true}}">获取验证码</view>
+        <view class='huoquyanzen' style='background:#cccccc' wx:elif="{{state==false}}">{{timwCode}}</view>
+        <!-- <view class='huoquyanzen'>重新获取</view> -->
+      </view>
+      <input class='huodongzhuti phonenumberzuit' placeholder='输入手机验证码' bindblur='blurYanZheng' value='{{codeCont}}'></input>
+      <view class='yanzheng' hidden='{{state1}}'>
+        <icon type="success" />
+      </view>
+    </view>
+  </view>
+
+
+
+  <view class='active-xuanzexinyuan' id="list-{{index}}" wx:for="{{info}}" wx:key="key">
+    <view class='xuanzexinyuantop'>
+      <view class='xuanzexinyuantop-legt'>选择心愿类型</view>
+      <view class='xuanzexinyuantop-right'>
+        <!-- <block wx:for="{{tabs}}" wx:key="*this">
+           <view id="{{index}}" class="shiwu {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class=''>{{item}}</view>
+          </view> 
+          <view id="{{index}}" class="shiwu" bindtap="tabClick">
+            <view class=''>{{item}}</view>
+          </view>
+        </block> -->
+      </view>
+    </view>
+    <view hidden="{{activeIndex != 0}}">
+      <view class='xuanzesdf'>
+        <view class='leftimglove'>
+          <!-- <view  class='img-aming' wx:if="{{item.chooseType == undefined}}" style="color:#10aeff">选择</view> -->
+          <image class='img-aming' src='/assets/img/neirong/sanchu.png' id="{{index}}" bindtap='remove'></image>
+
+          <view class='active-img-aming' id="{{index}}">
+            <image class='xuanzeinmg1' src='{{fileServer+item.chooseType.icon}}'></image>
+            <text class='xuanzelove'>{{item.chooseType.wishName}}</text>
+          </view>
+
+        </view>
+        <view class='xuanzeinmg' data-id="{{index}}" catchtap='tiaoZym'>
+          <image class='xuanzeinmgsrc' src='../../assets/img/neirong/touxiang.png'></image>
+        </view>
+      </view>
+      <view class='jiangpinmingc'>
+        <view class='shurujiangpoing'>心愿奖品名称</view>
+        <input class='iontxinyuanjiang' id="{{index}}" maxlength='14' placeholder='请输入心愿奖品名称' bindinput='WishPrizeInput'></input>
+      </view>
+      <view class='jiangpinnauber'>
+        <view class='jiangpinnauber2'>奖品份数</view>
+        <input class='jiangpinnauber3' id="{{index}}" placeholder='份数' bindinput='PrizeNumInput' bindblur='PrizeBlurInput'></input>
+        <text>个</text>
+      </view>
+    </view>
+    <!-- <view hidden="{{activeIndex != 1}}">选项二的内容</view> -->
+  </view>
+  <!-- <xinyuanleixin  class="xinyuanlei" wx:for="{{leixing}}" wx:key="item"></xinyuanleixin> -->
+  <view class='tianjiajiangleixin'>
+    <view class='tianjiajiangleixun' bindtap='insert'>
+      +增加心愿类型
+    </view>
+  </view>
+
+  <!-- <view class='tianjiajiangleixun' bindtap='remove'>
+    +移除
+  </view> -->
+
+
+  <view class='huodongzaiyao'>
+    <view class='zaiyao zaiyaotop '>
+      <text>活动注意事项说明</text>
+      <text>非必填</text>
+    </view>
+    <view class="section">
+      <textarea class='abcda' placeholder="填写本次活动的说明" maxlength='75' name="textarea" bindinput="digestInput" value='{{digest}}' />
+    </view>
+  </view>
+
+  <view class='huodongzaiyao'>
+    <view class='zaiyaotop introduce'>
+      <text class='zhuantixiangqing'>活动详情介绍(类似专题详情页)</text>
+      <text>非必填</text>
+    </view>
+
+    <view class='tianjiahuod' catchtap='goRichTextDemo'>
+      <view wx:for='{{detail_content}}' wx:key="item">
+        <view wx:if='{{item.type == 0}}'>
+          <text>{{item.info}}</text>
+        </view>
+        <view wx:else class='active-view-img'>
+          <image mode='aspectFit' class='imagess' src='{{item.info}}'></image>
+        </view>
+      </view>
+      <view class='text-xiangqing' wx:if="{{detail_content == ''}}">
+        <view class='graphic'>
+          <view class='graImg'>
+            +
+            <!-- <image  src='/assets/img/neirong/jia.png'></image> -->
+          </view>
+          <view>添加图文介绍</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <view class='shidingshijian' bindtap="open">
+    <view>{{openPrize[open_prize_con-1]}}</view>
+    <view class='xiugaitiaojian'>
+      <view class='tiaojiankaiqi'>修改开启心愿条件</view>
+      <image class='xiugaitianjianimg' src='../../assets/img/neirong/touxiang.png'></image>
+    </view>
+  </view>
+
+  <view class='dataconter' wx:if='{{open_prize_con == 1}}'>
+    <view>开奖时间：</view>
+    <view class="tianjiashijian-right" bindtap="powerDrawer" data-statu="open">
+      <view>
+        <text class='topdamath'>{{str}}</text>
+        <image class='xiugaitianjianimg' src='../../assets/img/neirong/touxiang.png'></image>
+      </view>
+    </view>
+    <!-- 模态框 -->
+    <view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+    <!--content-->
+    <!--使用animation属性指定需要执行的动画-->
+    <view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+      <view class="drawer_content">
+        <!-- <view>当前选择</view> -->
+        <view class='okqueding' data-statu="close" bindtap="powerDrawer">确定</view>
+        <my-date bind:bindSelect="bindSelect"></my-date>
+      </view>
+    </view>
+  </view>
+  <view wx:if='{{open_prize_con == 2}}'>
+    <view class='openNum'>
+      <view class=''>到达开奖的人数</view>
+      <input class='openNumInput' type='number' placeholder='人数' value='{{open_describe}}' bindinput='openPrizeConIuput'></input>
+      <view>人</view>
+    </view>
+  </view>
+  <view wx:if='{{open_prize_con == 3}}'>
+    <view class='dataconter' bindinput='openPrizeConIuput'>活动发起人手动开奖</view>
+    <!-- <input class='ji3 dataconter' type='number' placeholder='dhaudh' value='{{open_describe}}' bindinput='openPrizeConIuput'></input> -->
+  </view>
+  <!-- <view class='shedingdatatop'></view> -->
+  <view class='yingdaodj'>
+
+    <view class='swotcha'>
+      <view>引导关注与连接导流</view>
+      <switch checked="{{lead}}" bindchange="changeSwitch1" color='#d45147'></switch>
+    </view>
+    <view class="{{lead ? ' ' : 'switch'}}">
+
+      <view class='gongzonghao1ID'>
+        <view class='guanwangxiaochengxu'>官方公众号ID</view>
+        <input class='inputkuang' maxlength="16" placeholder='公众号ID' value='{{public_id}}' bindinput='publicIdInput'></input>
+      </view>
+
+      <!-- <view class='gongzonghao1ID'>
+        <view class='guanwangxiaochengxu'>官方小程序链接</view>
+        <input class='inputkuang' maxlength="16" placeholder='小程序链接'  bindinput='publicIdInput'></input>
+      </view> -->
+
+      <view class='huodong-active'>
+        <view class='activehuodongzhuti'>引导描述</view>
+      </view>
+      <view class='huodong-active'>
+        <input class='zhutishuru' maxlength="16" placeholder='请输入引导描述' value='{{lead_explain}}' bindinput='leadExplainInput'></input>
+      </view>
+
+      <!--
+      <view class='gongzonghao1ID'>
+        <view class='guanwangxiaochengxu'>引导描述</view>
+      </view>
+      <view>
+        <input class='zhutishuru' maxlength="16" placeholder='引导描述' value='{{lead_explain}}' bindinput='leadExplainInput'></input>
+      </view> -->
+
+      <view class='gongzonghao1login'>
+        <view class='guanwangxiaochengxu'>上传品牌logo支持png,jpg</view>
+        <view class='pinpailogo'>
+          <view class='logoimg'>
+            <image class='topuxiangtianjaimg' src='{{fileServer+logo}}' bindtap="upload"></image>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <!-- <view class='yingdaodj'>
+    <view class='swotcha'>
+      <view>仅公众号粉丝可参与</view>
+      <switch checked="{{only_fans}}" bindchange="changeSwitch2" color='#d45147'></switch>
+    </view>
+    <view class="{{only_fans ? ' ' : 'switch'}}"> -->
+
+  <!-- <view class="section mySection" bindtap='toImpower'>
+        <view class="section__title mytile">请授权所需公总号</view>
+        <view class="weui-select myWeSelect">未授权</view>
+      </view> -->
+
+
+  <!-- <view class='gongzonghao1ID'>
+        <view class='guanwangxiaochengxu'>设置回复关键词</view>
+        <input class='inputkuang' maxlength="16" placeholder='请设置关键词' bindinput=''></input>
+      </view> -->
+
+
+  <!-- <view>
+        <view class="gongzonghao1ID ">
+          <picker class="weui-btn" mode="date" value="{{date}}" start="2010-01-01" end="{{date}}" bindchange="bindDateChange">
+            <view class=' mytime'>
+              <view class=" mytile">用户最早关注时间</view>
+              <view class="weui-select myWeSelect">{{date}}</view>
+            </view>
+          </picker>
+        </view>
+      </view> -->
+
+
+  <!-- <view class='gongzonghao1ID'>
+        <view class='guanwangxiaochengxu'>官方公众号名称</view>
+        <input class='inputkuang' maxlength="16" placeholder='官网公众号名称' value='{{public_name}}' bindinput='publicNameInput'></input>
+      </view> -->
+
+  <!-- <view class='gongzonghao1ID'>
+        <view class='guanwangxiaochengxu'>设置口令</view>
+        <input class='inputkuang' maxlength="16" placeholder='设置口令' value='{{public_command}}' bindinput='publicCommandInput'></input>
+      </view> -->
+
+
+  <!-- <view class='gongzonghao1ID'>
+        <view class='guanwangxiaochengxu'>提示信息</view>
+        <input class='inputkuang' maxlength="16" placeholder='提示信息' value='{{prompt_msg}}' bindinput='promptMsgInput'></input>
+      </view> -->
+
+  <!-- </view>
+  </view> -->
+
+  <view class='shedingdatatop'>
+
+    <view class='swotcha'>
+      <view>设定心愿抽奖条件</view>
+      <switch checked="{{wish_condition}}" bindchange="changeSwitch3" color='#d45147'></switch>
+    </view>
+    <view class="{{wish_condition ? ' ' : 'switch'}}">
+      <view class='dataconter dataconter1'>
+        <view>指定性别：</view>
+        <view class='tianjiashijian-right'>
+          <picker bindchange="bindCountryChange" value="{{wish_index}}" range="{{countries}}">
+            <view class="weui-select weui-select_in-select-after">{{countries[wish_index]}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='shedingdatatop'>
+    <view class='swotcha'>
+      <view>组队助力</view>
+      <switch checked="{{need_help}}" bindchange="changeSwitch4" color='#d45147'></switch>
+    </view>
+    <view class="{{need_help ? ' ' : 'switch'}}">
+      <view class='dataconter dataconter1'>
+        <view>需要达到助力人数</view>
+        <input class='abstnumber' placeholder='人数' value='{{help_num}}' bindinput='helpNumInput'></input>
+      </view>
+    </view>
+  </view>
+
+  <view class='canyuzhe'>
+    <view class='swotcha'>
+      <view>允许分享</view>
+      <switch checked="{{share}}" bindchange="changeSwitch5" color='#d45147'></switch>
+    </view>
+  </view>
+  <button class='topcmdtijao' bindtap='saveActivity'>发起新活动</button>
+</view>
+<!-- <view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}">
+  <view class="zan-dialog__mask" bindtap="toggleDialog" />
+  <view class="zan-dialog__container">
+    <view class='zan-dlodingtitle'>提示
+    </view>
+    <view class='zan-p'>确定发起新活动？</view>
+    <view class='yaoqingshouquan'>
+      <view class='removeMode' bindtap='removeGb'>取消</view>
+      <view class='okmoadl' bindtap='saveActivity'>确定</view>
+    </view>
+  </view>
+</view> -->

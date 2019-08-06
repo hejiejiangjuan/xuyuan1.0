@@ -1,0 +1,46 @@
+<!--pages/embeddedCanvas/embeddedCanvas.wxml-->
+<view class='canvasBox'>
+  <view class='myCanvas'>
+    <canvas style="width:{{canvasWidth}}px; height:{{canvasHeight}}px;" canvas-id="firstCanvas" hidden=''></canvas>
+    <image class='myImg' src='{{imagePath}}'></image>
+
+    <view class='saveImg'>
+      <view class='saveImgBtn' bindtap='saveImg'>保存图片</view>
+    </view>
+  </view>
+</view>
+<view class='qianru'>
+  <view class='qianrutext' bindtap='modileTakue'>嵌入链接</view>
+  <image class='imgIcon' src='/assets/img/neirong/dd.png' bindtap='modileTakue'></image>
+</view>
+
+<scroll-view>
+    <view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}">
+  <view class="zan-dialog__mask" bindtap="toggleDialog" />
+  <view class="zan-dialog__container">
+    <view class='zan-dlodingtitle'>
+      <text>提示</text>
+      <text class='guagbi' bindtap='removeGb'>x</text>
+    </view>
+    <view class='zan-p'>公众号主可将抽奖嵌入菜单栏，或在推文里以多种样式插入抽奖</view>
+    <view class='yaoqingshouquan'>1.在公众平台左侧菜单栏【小程序管理】中，输入AppID，添加绑定小程序。</view>
+    <view class='yaoqingshouquan'>2.发起抽奖后保存【图片】和【路径】。进入公众号菜单栏/图文编辑器，选择【小程序】，按提示输入ID、路径、图片即可使用。</view>
+  </view>
+</view>
+</scroll-view>
+
+
+
+<view class='copyBox'>
+  <view class='copyCon'>
+    <view class='copyApp'>
+      <text class='copyLink'>AppID：pages/activitytheme/activitytheme</text>
+      <view class='copyBtn' bindtap='copyApp'>复制</view>
+    </view>
+    <view class='copyApp copyPage'>
+      <text class='copyLink'>PagePath：pages/activitytheme/activitytheme</text>
+      <view class='copyBtn' bindtap='copyPage'>复制</view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,17 @@
+/* pages/commonProblems/commonProblems.wxss */
+.commonProblem{
+  background-color: white;
+  margin: 20rpx 20rpx;
+  padding: 20rpx 20rpx;
+  border-radius: 3px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.26);
+}
+.problemTitle{
+  font-size: 16px;
+  font-weight: bold;
+}
+.problemContent{
+  font-size: 15px;
+  /* padding-left: 20px; */
+  color: #727272;
+}

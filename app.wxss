@@ -1,0 +1,243 @@
+/**app.wxss**/
+@import 'libs/style/weui.wxss';
+@import "template/views/views.wxss"; 
+@import "pages/css/icon.wxss"; 
+/**
+*参考bootstrap自行编写自己常用的一些公用样式文件
+*其中带有boy和girl是用于男女不同主题的切换使用
+**/
+page{
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  background-color: #f1f1f1;
+  /* font-size: 34rpx; */
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+input{
+  color: #898989;
+}
+view{
+  box-sizing: border-box;
+}
+textarea{
+  color: #898989;
+}
+.s-fill{
+  width: 100%;
+  height: 100%;
+}
+.box-size-border{box-sizing: border-box;}
+.box-size-padding{box-sizing: padding-box;}
+.box-size-content{box-sizing: content-box;}
+.text-center{text-align: center;}
+.text-little{font-size: 0.5rem !important;}
+.text-small{font-size: 0.8rem !important;}
+.text-normal{font-size: 0.9rem!important;}
+.text-shadow{text-shadow: 1px 1px 0px #f0f0f0 !important;}
+.text-big{font-size: 1rem !important;}
+.text-large{font-size: 1.2rem !important;}
+.text-large-1{font-size: 1.6rem !important;}
+.text-large-2{font-size: 2rem !important;}
+.text-white{color: white;}
+.text-base{color: #cdcdcd;}
+.text-success{color: #67C23A;}
+.text-error{color: #F56C6C;}
+.text-warning{color: #E6A23C;}
+.text-corn{color:#f4ea2a;}
+.text-gray{color: #8a8a8a;}
+.text-girl{color: #ef8383;}
+.text-boy{color: #629bea;}
+.border-girl{border:1px #ef8383 solid;}
+.border-gray{border:1px #8a8a8a solid;}
+.border-boy{border:1px #629bea solid;}
+.text-break{word-break:break-all;word-wrap:break-word;}
+.w-fill{width: 100%;}
+.w-100{width: 100px;}
+.h-30{height: 30px;}
+.h-40{height: 40px;}
+.h-50{height: 50px;}
+.h-100{height: 100px;}
+.h-200{height: 200px;}
+.line-h-1{line-height: 120%;}
+.line-h-2{line-height: 150%;}
+.line-h-3{line-height: 200%;}
+.line-h-30{line-height: 30px;}
+.line-h-40{line-height: 40px;}
+.line-h-50{line-height: 50px;}
+.h-flex{display: flex;}
+.h-block{display: block;}
+.p-relative{position: relative;}
+.p-absolute{position: absolute;}
+.p-fixed{position: fixed;}
+.f-hidden{overflow: hidden;}
+.p-a-t-0{top: 0px;}
+.p-a-t-1{top: 5px;}
+.p-a-t-2{top: 10px;}
+.p-a-t-3{top: 20px;}
+.p-a-l-0{left: 0px;}
+.p-a-l-1{left: 5px;}
+.p-a-l-2{left: 10px;}
+.p-a-l-3{left: 20px;}
+.p-a-r-0{right: 0px;}
+.p-a-r-1{right: 5px;}
+.p-a-r-2{right: 10px;}
+.p-a-r-3{right: 20px;}
+.p-a-b-0{bottom: 0px;}
+.p-a-b-1{bottom: 5px;}
+.p-a-b-2{bottom: 10px;}
+.p-a-b-3{bottom: 20px;}
+.flex-row{flex-direction: row;}
+.flex-wrap{flex-wrap: wrap;}
+.flex-no-wrap{flex-wrap: nowrap;}
+.flex-grow-1{flex-grow: 1;}
+.flex-col{flex-direction: column;}
+.flex-align-center{align-items: center;}
+.flex-align-start {align-items: flex-start;}
+.flex-align-end {align-items: flex-end;}
+.flex-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flex-justify-content-center{justify-content: center;}
+.flex-justify-content-end{justify-content: flex-end;}
+.flex-justify-content-start{justify-content: flex-start;}
+.flex-justify-content-between{justify-content: space-between;}
+.flex-justify-content-around{justify-content: space-around;}
+.float-l{float: left;}
+.float-r{float: right;}
+.abso-t{top: 0px}
+.abso-l{left: 0px}
+.abso-r{right: 0px}
+.abso-b{bottom: 0px}
+.mt-all-0{margin: 0px;}
+.mt-all-1{margin: 1px;}
+.mt-all-2{margin: 2px;}
+.mt-all-3{margin: 4px;}
+.mt-all-4{margin: 8px;}
+.mt-0{margin-top: 0px;}
+.mt-1{margin-top: 1px;}
+.mt-2{margin-top: 2px;}
+.mt-3{margin-top: 4px;}
+.mt-4{margin-top: 8px;}
+.mt-30{margin-top: 30px;}
+.ml-0{margin-left: 0px;}
+.ml-1{margin-left: 1px;}
+.ml-2{margin-left: 2px;}
+.ml-3{margin-left: 4px;}
+.ml-4{margin-left: 8px;}
+.ml-30{margin-left: 30px;}
+.mr-0{margin-right: 0px;}
+.mr-1{margin-right: 1px;}
+.mr-2{margin-right: 2px;}
+.mr-3{margin-right: 4px!important;}
+.mr-4{margin-right: 8px!important;}
+.mb-0{margin-bottom: 0px!important;}
+.mb-1{margin-bottom: 1px!important;}
+.mb-2{margin-bottom: 2px!important;}
+.mb-3{margin-bottom: 4px!important;}
+.mb-4{margin-bottom: 8px!important;}
+.p-all-0{padding: 0px!important;}
+.p-all-1{padding: 4px!important;}
+.p-all-2{padding: 8px!important;}
+.p-all-3{padding: 16px!important;}
+.p-t-b-1{padding: 1px 0px!important;}
+.p-t-b-2{padding: 2px 0px!important;}
+.p-t-b-3{padding: 4px 0px!important;}
+.p-t-b-4{padding: 8px 0px!important;}
+.p-l-r-1{padding: 0px 1px!important;}
+.p-l-r-2{padding: 0px 2px!important;}
+.p-l-r-3{padding: 0px 4px!important;}
+.p-l-r-4{padding: 0px 8px!important;}
+.p-l-r-5{padding: 0px 1rem!important;}
+.bg-white{background-color: white;}
+.bg-base {background-color: #f0f0f0;}
+.bg-gray {background-color: #8a8a8a;}
+.bg-optic{background:rgba(90, 90, 90, 0.5);}
+.bg-girl{background-color: #ef8383;}
+.bg-boy{background-color: #629bea;}
+.bg-girl-line{background:linear-gradient(to bottom, rgba(239,131,131,0.8), rgba(239,131,131,1));}
+.bg-boy-line{background:linear-gradient(to bottom, rgba(98,155,234,0.8), rgba(98,155,234,1));}
+.bg-success{background-color: #67C23A;}
+.bg-error{background-color: #F56C6C;}
+.bg-warning{background-color: #E6A23C;}
+.b-box-shadow{box-shadow: 0px 2px 1px 0px #cdcdcd}
+.b-box-shadow-w{box-shadow: 1px 1px 8px rgba(138, 138, 138, 0.7);}
+.img-fit{
+  object-fit:cover;
+}
+.img-s-16{
+  width: 16px;
+  height: 16px;
+}
+.img-s-2{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.img-s-3{
+  width: 2rem;
+  height: 2rem;
+}
+.img-s-4{
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.img-s-55{
+  width: 55px;
+  height: 55px;
+}
+.img-s-60{
+  width: 60px;
+  height: 60px;
+}
+.img-s-70{
+  width: 70px;
+  height: 70px;
+}
+.img-s-100{
+  width: 100px;
+  height: 100px;
+}
+.img-s-fill{
+  width: 100%;
+  height: 100%;
+}
+.border-w-2{
+  border: 2px solid white;
+}
+.border-w-2-g{
+  border: 2px solid #f0f0f0;
+}
+.border-w-4{
+  border: 4px solid white;
+}
+.circle-border-radius{border-radius: 50%;}
+.border-radiue-top{border-radius:6px 6px 0px 0px/6px 6px 0px 0px; }
+.border-radius-1{border-radius: 4px;}
+.border-radius-2{border-radius: 8px;}
+.text-hidden{
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.opacity-0{opacity: 0.3}
+.opacity-1{opacity: 0.5}
+.opacity-2{opacity: 0.7}
+.opacity-3{opacity: 0.9}
+.t-r-angle{
+  background: linear-gradient(-135deg, transparent 1em, white 0);
+}
+
+.hx-btn{
+  opacity: 1;
+}
+.hx-btn:active{
+  transform: scale(1.05);
+  opacity: 0.8;
+}

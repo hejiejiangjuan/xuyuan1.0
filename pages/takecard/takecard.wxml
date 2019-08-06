@@ -1,0 +1,117 @@
+<!--pages/takecard/takecard.wxml-->
+<canvas-share bindclose="close" userInfo="{{userInfo}}" visible="{{visible}}" />
+<modal show="{{showModal}}" height='60%' bind:cofom="manaGement"></modal>
+<view class='takecard-top'>
+  <view class='titiletake'>
+    <view class='touxiang-top'>
+      <image class='touxianginmg' src='{{activityObj.avatar_url}}'></image>
+    </view>
+    <view class='chengnitake'>{{activityObj.nick_name}}</view>
+    <view class='canhyuhuodong'>正在参与{{activityObj.activityTheme}}主题活动，你也来看看吧</view>
+  </view>
+  <view class='we-takcard-topimg'>
+    <image class='we-takcard-centerimg' mode='aspectFill' src='{{fileServer+activityObj.themeAddr}}'></image>
+  </view>
+  <view class='we-takcardongtaichungyi'>
+    {{activityObj.creativityExplain}}
+  </view>
+  <view class='we-takcardchuangyineirong' wx:for="{{activityObj.activity_wish_list}}" wx:key="item.id">
+    <view class='we-takcardtopdate'>
+      <view class='we-takcard-center-left'>
+        <text class='neimu'>{{item.wishName}}</text>
+        <text class='xinyuan'>心愿：{{item.prizeName}}×{{item.prizeNum}}</text>
+      </view>
+    </view>
+    <view class='we-takcard-neirong-right'>
+      {{item.wishContent}}
+    </view>
+  </view>
+
+
+  <view class='we-takcard-erweima'>
+    <view class='we-takcard-zutext'>
+      <text class='hontdatemath' wx:if='{{activityObj.openPrizeCon == 1}}'>{{activityObj.openDescribe}} 开奖</text>
+      <text class='hontdatemath' wx:elif='{{activityObj.openPrizeCon == 2}}'>参与者达到{{activityObj.openDescribe}}人开奖</text>
+      <text class='hontdatemath' wx:elif='{{activityObj.openPrizeCon == 3}}'>由发起人手动开奖</text>
+    </view>
+    <view class='we-takcard-zhuli'>参与条件：
+      <text wx:if='{{activityObj.onlyFans==1}}'> 需输入口令 </text>
+      <text wx:elif='{{activityObj.needHelp==1}}'> 需要{{activityObj.helpNum}}人助力 </text>
+      <text wx:else>无</text>
+    </view>
+    <view class='we-takcard-erweimaimg'>
+      <view class='xiaochenguxerweiamtt'>
+        <image mode="aspectFit" class='we-takcard-images' src='{{fileServer+activityObj.codeAddr}}'></image>
+      </view>
+      <view class='xiaochengxurer'>长按识别小程序，参与心愿活动</view>
+    </view>
+  </view>
+
+
+  <view class='we-takcard-titlemexinyuan'>我的心愿是</view>
+  <view class='we-takcard-title'>
+    <view class='we-takcard-ul' wx:for='{{activityObj.user_wish_list}}' wx:key='{{item.id}}'>
+      <view class='we-takcard-ul-img'>
+        <image class='imgui' src='{{fileServer+item.icon}}'></image>
+      </view>
+      <text class='we-takcardtext-li'>{{item.wishContent}}</text>
+    </view>
+
+
+
+    <view>
+
+      <!-- <view class='we-takcard-ul zijin'>
+        达成愿望所需要的金额
+      </view>
+      <view class='we-takcard-ul zijinnumber'>
+        4520-52852元
+      </view> -->
+
+    </view>
+    <view class='we-takcard-ul gushi'>
+      背后的故事
+    </view>
+    <view class="we-takcard-ul guship1">
+      {{activityObj.user_join_activity[0].story}}
+    </view>
+  </view>
+</view>
+<view class='fenxiangzuli'>
+  <view class='fenxianghaoyou backcolorbtn' bindtap="powerDrawer" data-statu="open">
+    分享好友助力
+  </view>
+  <view class='fenxianghaoyou' catchtap='moreActivity'>
+    更多心愿活动
+  </view>
+</view>
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+  <view class="drawer_content">
+    <text class='cardguanbi-toptext'>分享可获得助力哦！</text>
+    <view class='cardmodal'>
+      <view class='cardmodal-pengyou'>
+        <button class='cardtext' open-type="share">
+          <image class='model-image' src='/assets/img/neirong/fxtp.png'></image>
+          <text class='model-imgimg'>发送至好友/朋友圈</text>
+        </button>
+      </view>
+
+      <view class='cardmodal-img' catchtap='picturesDisplay'>
+        <button class='cardtext' bindtap="show" mode="cover">
+          <image class='model-image' src='/assets/img/neirong/bctp.png'></image>
+          <text class='model-imgimg'>生成分享图片</text>
+        </button>
+      </view>
+
+      <view class='cardmodal-img'>
+        <button class='cardtext' open-type='contact' bindtap="thecardLink" send-message-title="心愿卡" send-message-img="{{fileServer+activityObj.themeAddr}}" show-message-card="true">
+          <image class='model-image' src='/assets/img/neirong/lianjie.png'></image>
+          <text class='model-imgimg'>生成分享链接</text>
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

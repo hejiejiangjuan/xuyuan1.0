@@ -1,0 +1,180 @@
+/* pages/me-makewish/me-makewish.wxss */
+
+.imgaddr {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.imgaddr image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+
+.imgtitlee {
+  width: 83%;
+  margin-left: 25rpx;
+}
+
+.me-makewish {
+  width: 95%;
+  background: #fff;
+  margin: 30rpx auto;
+  box-shadow: 0 0 2px rgba(0, 0, 255, 0.089);
+  border-radius: 4px;
+  padding: 15rpx 34rpx;
+}
+
+.me-makewish-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+.me-makewish-topname {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* padding: 30rpx 0; */
+  position: relative;
+}
+
+.me-makewish-cenni {
+  font-size: 36rpx;
+  font-weight: 600;
+}
+
+.me-makewish-nametitle {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.me-makewish-position {
+  position: absolute;
+  top: -2rpx;
+  right: 10rpx;
+  font-size: 28rpx;
+  color: #727272;
+  padding-top: 12rpx;
+}
+
+.me-makewish-way {
+  width: 100%;
+  font-size: 26rpx;
+}
+
+.me-makewish-waytext {
+  padding-left: 20rpx;
+  color: #727272;
+}
+
+.me-makewishwaytext {
+  color: #276b95;
+}
+
+.me-makewish-ul {
+  width: 100%;
+  line-height: 45rpx;
+  font-size: 28rpx;
+  color: #898989;
+  display: flex;
+  border-bottom: 1px solid #ededed;
+  /* padding: 10rpx 0; */
+}
+
+.me-makewish-img {
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 23rpx;
+}
+
+.me-makewish-imgimg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.lingsiyinji {
+  display: block;
+  height: 54rpx;
+  border-right: 1px solid #c8c8c8;
+  margin: 28rpx 20rpx;
+}
+
+.me-makewish-text {
+  width: 80%;
+  font-size: 28rpx;
+  /* margin-left: 20rpx; */
+  padding-top: 28rpx;
+}
+
+.me-makewish-neirong {
+  width: 100%;
+  padding: 10rpx 0;
+  font-size: 32rpx;
+  /* font-weight: 600; */
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.me-makewish-p {
+  width: 100%;
+  font-size: 28rpx;
+  color: #7f7f7f;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 15rpx 0;
+}
+
+.me-makewish-bottom {
+  width: 100%;
+  display: flex;
+  font-size: 26rpx;
+  padding: 30rpx 0;
+  justify-content: space-between;
+}
+
+.zhankai {
+  width: 40%;
+  display: flex;
+}
+
+.me-makewish-zhichi {
+  width: 17%;
+  display: flex;
+}
+
+.index-naubare {
+  margin-left: 3px;
+}
+
+.zhankaisqindex {
+  display: none;
+  font-size: 28rpx;
+}
+
+.guship1 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.ellipsis {
+  -webkit-line-clamp: 6;
+}
+
+.unellipsis {
+  -webkit-line-clamp: 0;
+}
+
+.ellipsismake {
+  -webkit-line-clamp: 2;
+}
+
+.unellipsismake {
+  -webkit-line-clamp: 0;
+}
+
+.me-makewish-time {
+  color: #727272;
+}

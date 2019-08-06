@@ -1,0 +1,1 @@
+<rich-text bind:getDataList="saveData" initlist='{{datail}}'></rich-text>

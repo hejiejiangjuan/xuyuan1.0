@@ -1,0 +1,467 @@
+/* pages/wishResults/wishResults.wxss */
+
+.wishresults-top {
+  width: 100%;
+}
+
+.acticitetheme {
+  width: 100%;
+  background: #fff;
+}
+
+.wishresults {
+  width: 100%;
+  height: 370rpx;
+}
+
+.wishresults-img {
+  width: 100%;
+  height: 100%;
+}
+
+.activityTheme {
+  font-weight: bold;
+  font-size: 34rpx;
+}
+.actidacyu {
+  padding-top: 5px;
+  font-size: 28rpx;
+  color: #898989;
+}
+.actitheme-renshu {
+  font-size: 28rpx;
+  color: #6d6d6d;
+}
+.text-tiaojian {
+  background:#f2f2f4;
+padding:8rpx 12rpx;
+border-radius:4rpx;
+color:#8a8a8c;
+font-weight:600;
+}
+.wishresults-tiaojian {
+  width: 100%;
+  padding: 30rpx 34rpx;
+  font-size: 34rpx;
+}
+
+.actidate {
+  padding: 0 10rpx;
+}
+
+
+
+.beihoudegushiacr {
+  margin-top: 10rpx;
+  color: #474646;
+ font-size:30rpx;
+}
+
+.wishresults-toptext {
+  width: 100%;
+  height: 100rpx;
+  border-top: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 34rpx;
+}
+
+.activityementext {
+  display: block;
+  font-size: 32rpx;
+  color: #272727;
+}
+
+.faqize {
+ font-weight: 600;
+}
+
+.zhuyishixiang {
+  width: 100%;
+  background: #fef7ee;
+  margin: 34rpx 0;
+  padding: 30rpx 34rpx;
+  color: #665f4d;
+  font-size:32rpx;
+}
+
+.weui-bar__itemccc {
+  color: black;
+}
+
+.weui-navbar__title {
+  color: #7f7f7f;
+  font-size: 34rpx;
+}
+
+.weui-tab {
+  margin-top: 34rpx;
+  background: #fff;
+}
+
+.weui-tab__content {
+  width: 100%;
+  min-height: 400rpx;
+  padding: 0 34rpx;
+  /* text-align: center; */
+}
+
+.we-actithmebottom {
+  width: 100%;
+}
+
+.we-avtimebottom-top {
+  padding: 10rpx 0;
+  text-align: center;
+  font-size: 28rpx;
+}
+
+.chankanquanbusuoyou {
+  color: #576b95;
+}
+
+.we-actimebottom-img {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.we-actimebottomimg-ul {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  margin: 10rpx;
+}
+
+.we-actimebottomimg-li-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.weui-tab__content-no {
+  padding: 100rpx 0;
+  font-size: 34rpx;
+  font-weight: 600;
+  text-align: center;
+}
+
+.weui-tab__content-yes {
+  width: 100%;
+  padding: 40rpx 0;
+  text-align: center;
+}
+
+.weui-tab__content-yesxinyuan {
+  width: 100%;
+  padding: 16rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.weui-tab__content-yesneirong {
+  font-size: 26rpx;
+}
+
+.lianxishangjiadianpou {
+  font-size: 28rpx;
+  padding-bottom: 20rpx;
+}
+
+.weui-tab__content-btn {
+  width: 100%;
+  padding: 34rpx 0;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.weui-tab__content-btnleft {
+  width: 180rpx;
+  height: 116rpx;
+  padding: 15rpx 20rpx;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  border-radius: 10rpx;
+  text-align: center;
+}
+
+.xiaojingix {
+  width: 190rpx;
+  background: #e64340;
+  color: #fff;
+}
+
+.xiaojingixaaa {
+  width: 190rpx;
+  display: flex;
+  justify-content: center;
+  background: #e64340;
+  color: #fff;
+}
+
+.canjiagengduo {
+  background: #a1a1a1;
+  color: #fff;
+}
+
+.navbar {
+  width: 100%;
+  margin-top: 34rpx;
+  flex: none;
+  display: flex;
+  font-size: 34rpx;
+  background: #fff;
+  color: #a1a1a1;
+  border-bottom:1rpx solid #cccccc;
+}
+
+.navbar .item {
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 80rpx;
+  padding:5px 0;
+}
+
+.navbar .item.active {
+  color: #000;
+}
+
+.navbar .item.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rpx;
+}
+
+.cautabarcenter {
+  width: 100%;
+  min-height: 200rpx;
+  background: #fff;
+  padding: 0 34rpx;
+  /* text-align: center; */
+  margin-top: 1px;
+}
+
+.dachengxinyaunwish {
+  width: 100%;
+  padding: 20rpx 0;
+  font-size: 30rpx;
+  display: flex;
+  border-bottom:0.5px dashed #eaeaea;
+}
+
+.dachengxinyaunwish-left {
+  width: 36%;
+}
+
+.dachengxinyaunwish-right {
+  width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dacewisright {
+  padding-right: 15rpx;
+  border-right: 2px solid #a1a1a1;
+}
+
+.xinayuansss {
+  padding-left: 15rpx;
+}
+
+.wishresultsimglist {
+  width: 100%;
+  padding: 28rpx 34rpx 0 34rpx;
+}
+
+.wishresultsimglist-image {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  margin: 10rpx;
+}
+
+.wisretext {
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  color: #576b95;
+}
+
+.weui-tab__content-lidanxiangqing {
+  width: 100%;
+  padding: 34rpx 0;
+}
+
+.weui-tabwishResults {
+  width: 100%;
+  text-align: center;
+}
+
+.weui-tabwishResults-img {
+  width: 100%;
+  height: 450rpx;
+}
+
+.weui-image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 活动详情 */
+
+.weui-active {
+  width: 100%;
+  padding: 50rpx 0;
+}
+
+.wishresu-active {
+  width: 100%;
+}
+
+.wishitemimg {
+  width: 100%;
+  height: 450rpx;
+}
+
+.itemimage {
+  width: 100%;
+  height: 100%;
+}
+
+.weijiazai {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 40rpx 0;
+}
+
+.wishres-ul {
+  width: 100%;
+  display: flex;
+  padding: 20rpx 0;
+  font-size: 30rpx;
+  align-items: center;
+}
+
+.wishres-ulimgaa {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.wishres-ulimgsrc {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.wishres-ul-li {
+  padding: 0 12rpx;
+}
+
+/* 炫耀一下模态框 */
+
+.modal-wish-top {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.wish-modal {
+  width: 160rpx;
+  height: 160rpx;
+  margin: 30rpx auto;
+}
+
+.wish-modal-img {
+  width: 100%;
+  height: 100%;
+}
+
+.wish-modalname {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 40rpx;
+}
+
+.wish-histmodal {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.wish-histmodal-peng {
+  width: 80%;
+  height: 90rpx;
+  margin: 0 auto;
+  margin-top: 100rpx;
+  border-radius: 100rpx;
+  background: #e64340;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.wish-histmodal-peng image {
+  width: 50rpx;
+  height: 50rpx;
+  padding: 0 10rpx;
+}
+
+.wish-tupianshengcheng {
+  width: 80%;
+  height: 90rpx;
+  margin: 0 auto;
+  margin-top: 70rpx;
+  border-radius: 100rpx;
+  background: #f8d0cf;
+  border: 1px solid #e64340;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #e64340;
+}
+
+.wish-tupianshengcheng image {
+  width: 50rpx;
+  height: 50rpx;
+  padding: 0 10rpx;
+}
+
+.shengchenglianmjie {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 30rpx;
+  padding: 40rpx 0;
+  color: #898989;
+}
+
+.active1 {
+  color: black;
+  /* font-family:"黑体"; */
+}
+
+.imagee-wishResults {
+  width: 32rpx;
+  height: 32rpx;
+  padding: 10rpx 10rpx;
+}

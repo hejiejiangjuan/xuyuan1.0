@@ -1,0 +1,40 @@
+<!--pages/me/me.wxml-->
+<view class='me'>
+  <view class='me-we-top'>
+    <view class='me-we-img'>
+      <image class='meweimg' src='{{avatarUrl}}'></image>
+    </view>
+    <view class='me-we-title'>{{nickName}}</view>
+  </view>
+  <view class='me-we-center'>
+    <view class='me-we-min-center' >
+      <view class='me-we-ul'  bindtap='memakeWish'>
+        <view class='me-we-tt'>{{wishDetailCount}}</view>
+        <view class='me-we-td'>许下的心愿</view>
+      </view>
+      <view class='me-we-ul' bindtap='meActivities'>
+        <view class='me-we-tt'>{{userJoinCount}}</view>
+        <view class='me-we-td'>参与的活动</view>
+      </view>
+      <view class='me-we-ul' catchtap='realizeWish'>
+
+        <view class='me-we-tt'>{{userImplCount}}</view>
+        <view class='me-we-td'>实现的心愿</view>
+      </view>
+      <view class='me-we-ul' style='border:none' bindtap='founDing'>
+        <view class='me-we-tt'>{{createActivityCount}}</view>
+        <view class='me-we-td'>发起的活动</view>
+      </view>
+    </view>
+  </view>
+  <view class='me-bottom'>
+    <view class='me-bottom-one'  catchtap='wishResults'>
+      <text>常见问题</text>
+      <image style="width: 20px;height: 20px;" src='../../assets/img/neirong/touxiang.png'></image>
+    </view>
+    <view class='me-bottom-one' style='border:none;' catchtap='businessCooperation'>
+      <text>商务合作</text>
+      <image style="width: 20px;height: 20px;" src='../../assets/img/neirong/touxiang.png'></image>
+    </view>
+  </view>
+</view>

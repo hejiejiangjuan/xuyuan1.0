@@ -1,0 +1,18 @@
+<!--pages/iadmin/iadmin.wxml-->
+<text class='select-top'><text class='h3'>张三李四</text> 申请授权，用于发起仅公众号粉丝可参与抽奖，请公众号管理员审批</text>
+  <view class='zhuyishixiang'>
+    <image class="imagee-wishResults" src='../../assets/img/neirong/yinhao1.png'></image>
+  </view>
+<view class='selice'>
+  <radio-group bindchange="radioChange">
+    <label class="weui-cell weui-check__label" wx:for="{{radioItems}}" wx:key="value">
+      <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}" />
+
+      <view class="weui-cell__bd">{{item.name}}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+        <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+      </view>
+    </label>
+  </radio-group>
+</view>
+<button class='btn-shouquan' bindtap="modileTakue">申请授权</button>

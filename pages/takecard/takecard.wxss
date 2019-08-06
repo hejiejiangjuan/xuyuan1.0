@@ -1,0 +1,358 @@
+/* pages/takecard/takecard.wxss */
+.takecard-top{
+  width: 95%;
+  margin: 30rpx auto;
+  margin-top: 100rpx;
+  background: #ffffff;
+  padding-bottom: 40rpx;
+  position: relative;
+  margin-bottom:130rpx;
+}
+.titiletake{
+  width: 90%;
+  margin: 0 auto;
+  padding: 20rpx 0rpx;
+}
+.touxiang-top{
+  width: 150rpx;
+  height: 150rpx;
+  position: absolute;
+  top: -90rpx;
+  left: 39%;
+  border-radius: 50%;
+}
+.touxianginmg{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.chengnitake{
+width: 80%;
+height: 40rpx;
+  margin:0 auto;
+  margin-top: 11%;
+  text-align: center;
+  line-height: 40rpx; 
+}
+.canhyuhuodong{
+  width: 100%;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 40rpx;
+  padding-top: 20rpx;
+}
+.we-takcard-titlemexinyuan{
+  width: 100%;
+  height: 95rpx;
+  padding: 12rpx 0;
+  text-align: center;
+  font-size: 34rpx;
+  font-weight: 600;
+  line-height: 95rpx;
+  box-shadow:0 -2px 3px -1px #e5e5e5;
+}
+.we-takcard-title{
+  width: 95%;
+  height: 100%;
+  margin: 0rpx auto;
+  border-top: 1px solid #e5e5e5;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+
+.we-takcard-ul{
+  width:100%;
+  display: flex;
+  /* align-items: center; */
+  border-bottom: 1px solid #e5e5e5;
+  padding:12rpx 10rpx;
+}
+.guship1{
+  display: -webkit-box;
+  -webkit-box-orient:vertical;
+  text-overflow: ellipsis;
+  overflow:hidden;
+  color: #898989;
+  font-size: 28rpx;
+}
+/* .ellipsis{
+  -webkit-line-clamp:1; 
+}
+.unellipsis{
+  -webkit-line-clamp:0;
+} */
+.zhankaisqtakcard{
+  display: none;
+  font-size: 28rpx;
+}
+.we-takcard-ul-img{
+  width:60rpx;
+  height:60rpx;
+  /* background: #1296db; */
+  margin-top: 5rpx;
+  padding-right:20rpx; 
+  
+}
+.imgui{
+  width: 60rpx;
+  height:60rpx;
+   border-radius: 50%;
+}
+.we-takcardtext-li{
+  display: block;
+  width: 80%;
+  font-size: 26rpx;
+  margin-left: 20rpx;
+  padding-left: 20rpx;
+  line-height: 35px;
+  border-left: 1rpx solid #e5e5e5;
+}
+.zijin{
+  font-size: 28rpx;
+  font-weight: 600;
+}
+.zijinnumber{
+  color: #e94f4f;
+  font-weight: 600;
+}
+.gushi{
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.fenxiangzuli{
+  position: fixed;
+  bottom:0;
+  border-top: 1px solid #cccccc;
+  width: 100%;
+  height: 120rpx;
+  background: #ffffff;
+  /* margin: 20rpx auto; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.fenxianghaoyou{
+  height: 60%;
+  width: 45%;
+  text-align: center;
+  line-height: 65rpx;
+  border: 1px solid #e5e5e5;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+}
+.backcolorbtn{
+  background: #e94f4f;
+  color: #ffff;
+  border: none;
+}
+
+/* 新增内容 */
+.we-takcard-topimg{
+  width: 100%;
+  height: 400rpx;
+  padding: 28rpx;
+}
+.we-takcard-centerimg{
+  width: 100%;
+  height:100%;
+}
+.we-takcardongtaichungyi{
+  width: 100%;
+  font-size: 32rpx;
+  font-weight: 600;
+  padding: 0 34rpx;
+}
+.we-takcardchuangyineirong{
+  width: 100%;
+  padding: 8rpx 34rpx;
+  display: flex;
+  font-size: 26rpx;
+}
+.we-takcardtopdate{
+  width:100%;
+  display: flex;
+  color: #a0a0a0;
+}
+.neimu{
+  border-right: 2px solid #e5e5e5;
+  padding-right:10rpx; 
+}
+.xinyuan{
+  padding-left: 10rpx;
+}
+.we-takcard-neirong-right{
+  width: 70%;
+  color: #b2b2b2;
+}
+.we-takcard-erweima{
+  width: 95%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 20rpx 10rpx;
+  margin-top: 20rpx;
+  border-top: 1px solid #e5e5e5;
+}
+.we-takcard-zutext{
+  width: 100%;
+  font-size: 28rpx;
+  color: #4c4c4c;
+}
+.we-takcard-lefttext{
+  padding: 0 34rpx;
+}
+.we-takcard-zhuli{
+  width: 100%;
+  font-size: 28rpx;
+  color: #4c4c4c;
+}
+.we-takcardtexts{
+ color:#e64542;
+}
+.we-takcard-erweimaimg{
+  width: 70%;
+  margin: 40rpx auto;
+}
+.xiaochenguxerweiamtt{
+  width: 100%;
+  height: 200rpx;
+}
+.we-takcard-images{
+  width: 100%;
+  height: 100%;
+}
+.xiaochengxurer{
+  width: 100%;
+  font-size: 26rpx;
+  padding: 20rpx 0;
+  text-align: center;
+  color: #e64340;
+}
+
+
+ /* 模态弹框 */
+.modals {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: red; */
+}
+ 
+.mask {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0
+}
+ 
+.content {
+  position: absolute;
+  z-index: 1001;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30rpx;
+  height: 300rpx;
+  background-color: #ffffff;
+}
+ 
+/*动画前初始位置*/
+ 
+.bottom-pos {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.cardguanbi{
+  position: absolute;
+  top: -4rpx;
+  right: 25rpx;
+  font-size: 40rpx;
+}
+.cardguanbi-toptext{
+  font-size: 34rpx;
+  position: absolute;
+  top: 15rpx;
+  left: 30rpx;
+}
+.cardmodal{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.cardmodal-pengyou{
+  width: 50%;
+  height: 70%;
+  margin-top: 10%;
+  font-size: 30rpx;
+  text-align: center;
+}
+.cardmodal-img{
+  width: 50%;
+  height: 70%;
+   margin-top: 10%;
+  text-align: center;
+  font-size: 30rpx;
+}
+.model-image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 20rpx;
+  /* border-radius: 50%; */
+}
+.cardtext{
+  width: 90%;
+  height: 100%;
+  border: none;
+  font-size: 30rpx;
+  background: #ffffff;
+  
+  /* background: rgba(0, 0, 0, 0); */
+}
+.model-imgimg{
+  display: block;
+  height: 50rpx;
+  font-size: 20rpx;
+  line-height: 50rpx;
+  text-align: center;
+}
+
+
+
+
+/*mask*/
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #000000;
+  opacity: 0.2;
+  overflow: hidden;
+}
+/*content*/
+.drawer_attr_box {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1001;
+  background: #ffffff;
+}
+.drawer_content {
+  padding: 20rpx 40rpx;
+  height: 310rpx;
+  overflow-y: scroll;
+}
+
+

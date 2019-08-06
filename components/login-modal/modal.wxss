@@ -1,0 +1,68 @@
+/* components/modal/modal.wxss */
+
+.mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  /* height: 80%; */
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+
+.loginmodel-center {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.login-modeal-name {
+  width: 100%;
+  margin: 50rpx 0;
+   text-align: center;
+}
+
+.loginmodeal-img {
+  width: 140rpx;
+  height: 140rpx;
+  margin: 0 auto;
+}
+
+.loginmodeal-imagesrc {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.modale-name{
+  margin-top: 10rpx;
+}
+
+.login-p {
+  width: 100%;
+  margin-top: 15%;
+  font-size: 26rpx;
+  color: #7f7f7f;
+}
+.login-modale-btn{
+  width: 100%;
+  height: 80rpx;
+  margin-top: 20%;
+  background: #fa541c;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #ffffff;
+  border-radius: 10rpx;
+}

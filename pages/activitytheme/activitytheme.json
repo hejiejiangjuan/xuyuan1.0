@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "活动主题",
+  "usingComponents": {
+    "login-view": "../../components/login-view/login-view",
+    "modal": "../../components/login-modal/modal",
+    "lock": "../../components/modal/modal"
+  }
+}

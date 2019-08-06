@@ -1,0 +1,102 @@
+/* pages/irole/irole.wxss */
+.weui-cell__bd{
+  font-size: 32rpx;
+}
+.btn-shouquan{
+  font-size: 32rpx;
+}
+.select-top {
+  display: block;
+  padding: 30rpx 34rpx;
+  font-size: 30rpx;
+  color: #999;
+}
+
+.weui-cells {
+  font-size: 34rpx;
+}
+
+.text-cells {
+  margin-top: 34rpx;
+  background: #fff;
+}
+
+.btn-shouquan {
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 50rpx;
+  background: #999;
+  color: #fff;
+  text-align: center;
+  font-size: 34rpx;
+}
+
+.selice {
+  background: #fff;
+}
+
+.zan-dialog__mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+.zan-dialog__container {
+  position: fixed;
+  bottom: 400rpx;
+  width: 650rpx;
+  height: 420rpx;
+  margin-left: 50rpx;
+  background: #f8f8f8;
+  transform: translateY(300%);
+  transition: all 0.01s ease;
+  z-index: 1200;
+  /* border-radius: 20rpx; *//* box-shadow: 0px 3px 3px 2px gainsboro; */
+}
+
+.zan-dialog--show .zan-dialog__container {
+  transform: translateY(0);
+}
+
+.zan-dialog--show .zan-dialog__mask {
+  display: block;
+}
+
+.zan-dlodingtitle {
+  width: 100%;
+  text-align: center;
+  font-size: 34rpx;
+  color: #999;
+  padding: 30rpx 0;
+  position: relative;
+}
+
+.guagbi {
+  position: absolute;
+  top: 6rpx;
+  right: 25rpx;
+  font-size: 52rpx;
+}
+
+.zan-p {
+  width: 100%;
+  padding: 30rpx 34rpx;
+  font-size: 32rpx;
+}
+
+.yaoqingshouquan {
+  width: 80%;
+  text-align: center;
+  margin: 20rpx auto;
+  background: #e64542;
+  padding: 15rpx 0;
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 600;
+}

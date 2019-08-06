@@ -1,0 +1,268 @@
+/**index.wxss**/
+page{
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+}
+.weui-loadmore {
+  width: 100%;
+  height: 100rpx;
+  font-size: 30rpx;
+  text-align: center;
+  margin-top: 30rpx;
+}
+
+.weui-loading {
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-animation: weuiLoading 1s steps(12, end) infinite;
+  animation: weuiLoading 1s steps(12, end) infinite;
+  /* background: transparent url() no-repeat; */
+  background-size: 100%;
+}
+
+.weui-loadmore-tips {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+
+.we-index{
+  width: 100%;
+  height: 100%;
+
+  box-sizing: border-box;
+}
+.indexnavbar{
+  box-sizing:border-box;
+  height: 100%;
+}
+.we-index-center{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.we-navbar{
+  display: flex;
+  margin-top: 1px;
+  background: #ffffff;
+}
+.we-nabbar-top{
+  padding: 10rpx 55rpx;
+}
+.weui-bar__item_on{
+  border-bottom: 2px solid #f6bfac;
+  color: #fa541c;
+}
+
+.we-index-list{
+  /* width: 95%; */
+  margin:  32rpx 24rpx;
+  padding: 0 32rpx;
+   background-color:white;
+   box-shadow: 0 0 2px rgba(0, 0, 255, 0.089);
+  border-radius: 4px;
+}
+.we-index-list-top{
+  width: 100%;
+  height: 100%;
+  padding-top: 32rpx;
+   background-color: #ffffff;
+  display: flex;
+}
+.index-imgeles{
+   width: 88rpx;
+  height: 88rpx;
+}
+.we-index-topimg{
+  width: 100%;
+  height: 100%;
+  border-radius: 15rpx;
+  
+}
+.we-in-img{
+  display: none;
+}
+.we-index-name{
+ width: 75%; 
+  margin-left: 28rpx;
+}
+.we-index-name-top{
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+.we-indexname{
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.we-indexposition{
+ position: absolute;
+ right: -35rpx;
+ top: 12rpx;
+ font-size: 28rpx;
+ color: #727272;
+}
+.we-index-name-bottom{
+  /* height: 50%; */
+  /* margin-top: 24rpx; */
+  font-size: 22rpx;
+  padding-top:15rpx;
+}
+.we-indexdate{
+  padding-right:40rpx;
+  color: #727272;
+  
+}
+.we-xinxin{
+  /* font-size: 28rpx; */
+  color: #727272;
+}
+.we-indexlaizi{
+  color: #1296db;
+}
+.we-index-title{
+  width: 100%;
+  height: 100%;
+  font-size: 28rpx;
+}
+
+.we-index-ul{
+  width:100%;
+  line-height: 45rpx;
+  font-size: 28rpx;
+  color: #898989;
+  display: flex;
+  border-bottom: 1px solid #ededed;
+  padding: 10rpx 0;
+}
+.guship1{
+  display: -webkit-box;
+  -webkit-box-orient:vertical;
+  text-overflow: ellipsis;
+  overflow:hidden;
+  /* white-space: nowrap */
+}
+.ellipsis{
+  -webkit-line-clamp:6; 
+}
+.unellipsis{
+  -webkit-line-clamp:0;
+}
+.abc{
+  display: none;
+}
+.zhankaisqindex{
+  display: none;
+  font-size: 28rpx;
+}
+.we-index-ul-img{
+  width: 60rpx;
+  height: 60rpx;
+  /* margin-top: 29rpx; */
+}
+.imgui{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.lingsiyinji{
+  display: block;
+  height: 45rpx;
+  /* border: 1px solid black; */
+  border-right: 1px solid #c8c8c8;
+  margin: 0rpx 24rpx;
+  margin-left: 37rpx;
+  margin-top:10rpx;
+}
+.we-indextext-li{
+  width: 75%;
+  min-height: 30rpx;
+  padding:5rpx 0;
+  padding-top: 10rpx;
+  font-size: 30rpx;
+  color: #353535;
+}
+.ellipsissss{
+   /* -webkit-line-clamp:1;  */
+   white-space: nowrap;
+}
+.unellipsissss{
+  -webkit-line-clamp:0;
+}
+.zijin{
+  font-size: 28rpx;
+  font-weight: 600;
+}
+.zijinnumber{
+  color: red;
+  font-weight: 600;
+}
+.gushi{
+  font-size: 28rpx;
+  font-weight: 600;
+}
+.we-indexzhankai{
+  width: 100%;
+  height: 80rpx;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 15rpx
+}
+.zhiciimg{
+  width: 60rpx;
+  height: 60rpx;
+}
+.zhici{
+  height: 100%;
+  /* padding-left: 50%; */
+  display: flex;
+  line-height: 60rpx;
+}
+.zhiciindex{
+  display: block;
+  width: 70rpx;
+  text-align: center;
+}
+.zhiciindex111{
+  display: block;
+  color: #e04e39;
+  width: 100rpx;
+  text-align: center;
+}
+.zhiciindex333{
+  color: #e04e39;
+}
+.zhiciindex2222{
+  display: none;
+}
+.index-naubare{
+  display: block;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-left: 5%;
+}
+.we-zhanshou{
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #727272;
+}
+.zhankaishouqi{
+  width: 30rpx;
+  height: 30rpx;
+  padding: 15rpx 5rpx;
+}
+.makewish-neirong{
+   width: 100%;
+   margin: 0 auto;
+  padding: 28rpx 0rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  border-bottom: 1px solid #e5e5e5;
+  color: rgba(0, 0, 0, 0.747)
+}

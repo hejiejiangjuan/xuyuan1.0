@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "参与许心愿",
+  "usingComponents": {
+    "city-picker": "../../components/city-picker/city-picker"
+  }
+}

@@ -1,0 +1,15 @@
+/* pages/imput/input.wxss */
+
+
+.abcda{
+  width: 100%;
+  padding: 20rpx 20rpx;
+  background: #ffffff;
+}
+.btnokwanc{
+  width: 80%;
+  height: 80rpx;
+  margin: 20rpx auto;
+  text-align: center;
+  line-height: 80rpx;
+}

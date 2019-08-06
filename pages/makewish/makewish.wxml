@@ -1,0 +1,164 @@
+<!--pages/makewish/makewish.wxml-->
+<view class='makewish-center page'>
+  <view class='makewish-top'>
+    <text class='makewishtop-liuxian'>留下您的心愿</text>
+    <text class='makewishtop-shuoming'>一次最多可留下六个心愿</text>
+  </view>
+
+  <view class="page__bd">
+    <!-- <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">错误提示</view> -->
+
+    <view class='tianjiaxinyuan' wx:for="{{info}}" wx:key="id">
+      <view class='tinajixinyuan-ul'>
+        <textarea class="we-textareaul" placeholder="请输入心愿30个字" maxlength='30' id='{{index}}' value='{{item.wishContent}}' bindinput='wishContentInput' />
+        <view class='we-tiajia-right' id="{{index}}" bindtap='tiaoZym'>
+          <!-- <image class="we-tianright-img {{!item.chooseType.icon?'on':''}}" src='../../assets/img/neirong/zhuanshi.png'></image> -->
+          <image class="we-tianright-img " src="{{fileServer+(item.chooseType.icon?item.chooseType.icon:'default/default.png')}}"></image>
+          <view class='we-tiajia-rightview'>
+            <view class=" {{item.chooseType.wishName?'titlexinyuanBlock':'titlexinyuanFlex'}}">
+              <text>{{item.chooseType.wishName}}</text>
+              <text class='genghuan'>更换</text>
+            </view>
+          </view>
+        </view>
+        <image class="tinajixinyuan-ul-remove {{item.chooseType == '' ? 'shanchutupian':''}}" src='../../assets/img/neirong/sanchu.png' id="{{index}}" data-id='{{}}' catchtap='remove'></image>
+      </view>
+    </view>
+    <view class='tianjiajiangleixun' bindtap='insert'>
+      +增加心愿类型
+    </view>
+
+    <!-- <view class='makewish-weidate'>
+      <text class='makewish-ming'>达成心愿所需的金额区间:</text>
+      <view class='makewish-mome'>
+        <input class='makewish-input' type='text' placeholder='请输入金额区间'></input>
+      </view>
+    </view> -->
+
+    <view class="makewish-weidate">
+      <!-- <text class='makewish-ming'>想要心愿达成时间</text> -->
+      <view class='makewish-date'>
+        <view class="dateint">
+          <view class="datetitle-tart">
+            想要心愿达成时间：
+          </view>
+          <view class="datetart-xuanze">
+            <picker mode="date" value="{{date}}" start="{{dateStart}}" bindchange="bindDateChange">
+              <view class="we-dateinput">{{date}}</view>
+            </picker>
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+
+    <view class='wevieww'>
+      <view class="weutitle">心愿背后的故事</view>
+      <view class="weui-textarea__bd">
+        <textarea class="weuitextarea" placeholder="请输入文本" style="height: 3.3em" maxlength='500' bindinput="bindText" value='{{storyInput}}' />
+        <view class="weui-textarea-counter">{{t_length}}/500</view>
+      </view>
+    </view>
+
+    <view class='weui-cells__titletext'>你的心愿被选中实现时,我们将通过微信号通知你</view>
+    <view class='wx-code'>
+      <view class="weuiname__title">
+        <text>留下你的微信号：</text>
+        <input class="weui-input" style='font-size: 26rpx;width:57%;text-align: right; color:black;' placeholder="请输入微信" maxlength='30' value='{{wxNum}}' bindinput="bindWxinput" />
+      </view>
+
+
+      <!-- <view class="weuiintbd">
+        <input class="weui-input" style=' font-size: 32rpx;width:57%;' placeholder="请输入微信..." maxlength='30' value='{{wxNum}}' bindinput="bindWxinput" />
+      </view> -->
+    </view>
+
+
+    <!-- <view class='makewnameswitch'>
+      <view class='we-swichtop'>
+        <view class="weui-cell__bd">匿名发布
+           <text class='xiaozi'>(将不会生成心愿卡)</text> 
+        </view>
+
+        <view class="weui-cell__ft">
+          <switch color="#09bb07" checked="{{pseu}}" bindchange="pseuDony"></switch>
+        </view>
+      </view>
+      <view class=" {{pseu ? '':'on'}}">
+        <view class="takaaa">
+          <view class="takaaa-tart">
+            昵称：
+          </view>
+          <view class="takaaa-xuanze">
+            <input class='makewnameswitchaaa' placeholder='匿名昵称' value='{{randomName}}' bindinput='bindNickNameInput'></input>
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+
+    <view class='makewnameswitch'>
+      <view class='we-swichtop'>
+        <view class="weui-cell__bd">隐藏头像
+         <text class='xiaozi'>(关闭将使用你的微信头像发布)</text> 
+        </view>
+
+        <view class="weui-cell__ft">
+          <switch color="#09bb07" checked="{{titleImg}}" bindchange="titleImgswitch" />
+        </view>
+      </view>
+      <view hidden="{{!titleImg}}">
+        <view class="touxiangtitle">
+          <view class="datetitle-tart">
+            头像：
+          </view>
+          <view class="touxiangtitle-xuanze">
+            <view class='shangchuantouxiang'>
+              <image class='imgtoo' src='{{fileServer+randomImg}}'></image>
+            </view>
+          </view>
+          <view class='imgxuanz' bindtap="upload">
+            <image class='imgxuanz-img' src='../../assets/img/neirong/touxiang.png'></image>
+          </view>
+        </view>
+      </view>
+    </view> -->
+
+
+    <view class="wepositionmaker">
+      <view class="wepositionmaker-bale">地区</view>
+      <view class="wepositionmaker-baleaca" bindtap='clickArea'>
+        <picker class="wepositionmaker-baleccc" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{selectArea}}" range-key="{{'name'}}" bindcancel="bindcancel">
+          <view class="wepositionmaker-baleccc" wx:if="{{selectArea == ''}}">请选择</view>
+          <view class="wepositionmaker-baleccc" wx:else>
+            {{selectArea[0][multiIndex[0]].name}}{{selectArea[1][multiIndex[1]].name?'-'+selectArea[1][multiIndex[1]].name:''}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <!-- <view class='we-swichtop'>
+      <view class="weui-cell__bd">同步至星海
+      </view>
+      <view class="weui-cell__ft">
+        <switch color="#09bb07" checked="{{ishish}}" bindchange="isHish" />
+      </view> 
+    </view> -->
+    <button class='topcmdtijaook' bindtap='submitWish'>许愿</button>
+    <view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}">
+      <view class="zan-dialog__mask" bindtap="toggleDialog" />
+      <view class="zan-dialog__container">
+        <view class='zan-dlodingtitle'>提示
+          <!-- <text class='guagbi' bindtap='removeGb'>x</text> -->
+        </view>
+        <view class='zan-p'>许愿{{messageModal}}</view>
+        <view class='yaoqingshouquan'>
+          <view class='removeMode' bindtap='removeGb'>取消</view>
+          <view class='okmoadl' bindtap='submitmodal'>确定</view>
+        </view>
+      </view>
+    </view>
+    <city-picker id="city-picker" value="{{cityPickerValue}}" isShow="{{cityPickerIsShow}}" bindsureclick="cityPickerOnSureClick" bindcancelclick="cityPickerOnCancelClick" />
+  </view>
+</view>

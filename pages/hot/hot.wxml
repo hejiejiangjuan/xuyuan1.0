@@ -1,0 +1,93 @@
+<!--pages/hot/hot.wxml-->
+<view class='hont-center'>
+  <view class='hont-list' wx:for="{{list}}" wx:key="{{item.id}}" wx:for-index="idx">
+    <view class='we-hont-list-top' catchtap='toActivityDetail' data-index="{{idx}}">
+      <view></view>
+      <view class='hont-imgimage' wx:if="{{item.logo!=null}}">
+        <image class='we-hont-topimg' src='https://file.heidouinfo.com/{{item.logo}}'></image>
+      </view>
+      <view class='we-hont-name'>
+        <view class='we-hont-name-top'>
+          <text class='we-hontname'>{{item.activityTheme}}</text>
+          <!-- <view class='we-hontposition' wx:if="{{item.position == ''}}">木星</view> -->
+          <!-- <view wx:else> -->
+          <text class='we-hontposition'>{{item.position}}</text>
+          <!-- </view> -->
+        </view>
+        <view class='we-hont-name-bottom'>
+          <text class='we-hontdate'>{{item.beforeTime}}</text>
+          <text class='we-xinxin'>来自 <text class='we-hontlaizi'>{{item.nick_name}}</text> </text>
+        </view>
+      </view>
+    </view>
+    <!-- <view class='hont-center-p'>
+      {{item.p1}}
+    </view> -->
+    <view class='hotong' catchtap='toActivityDetail' data-index="{{idx}}">
+      <image class='hotongimg' mode='aspectFill' src='{{fileServer+item.themeAddr}}'></image>
+    </view>
+    <view class='hot-title'>
+      <view class='title-left'>
+        <text class='hot-lefttop'>{{item.creativityExplain}}</text>
+        <text class='hont-top-left'>{{item.digest}}</text>
+      </view>
+      <!-- <view class='title-right'>
+        <button class='hot-title-botton'>立即参与</button>
+      </view> -->
+    </view>
+    <view class='hotxiangmu' wx:for="{{item.activity_wish_list}}" wx:key="item.index" wx:for-item="wish_list">
+      <view class='hot-ul'>
+        <view class='hot-ulimgaa'>
+          <image class='hot-ulimgsrc' src='{{fileServer+wish_list.icon}}'></image>
+        </view>
+        <text class='hot-ul-li'>{{wish_list.wishName}}</text>
+        <text class='hot-ul-li2'><text>心愿{{idnex}}:{{wish_list.prizeName}}</text>×{{wish_list.prizeNum}}</text>
+      </view>
+    </view>
+    <view class='hont-btncanyu'>
+      <view class='hont-btncanyu-left'>
+        <view class='hont-cnmright'  wx:if='{{item.onlyFans ==1 || item.needHelp ==1}}'>
+          <text>参与条件：</text>
+          <text wx:if='{{item.onlyFans==1}}' class='text-tiaojian'> 需输入口令 </text>
+          <text wx:if='{{item.onlyFans!=1 && item.needHelp==1}}' class='text-tiaojian'> 需要{{item.helpNum}}人助力 </text>
+        </view>
+        <view class='hont-btncanyudate'>
+          <text class='hontdatemath' wx:if='{{item.openPrizeCon == 1}}'>{{item.openDescribe}} 开奖</text>
+          <text class='hontdatemath' wx:elif='{{item.openPrizeCon == 2}}'>参与者达到{{item.openDescribe}}人开奖</text>
+          <text class='hontdatemath' wx:elif='{{item.openPrizeCon == 3}}'>由发起人手动开奖</text>
+        </view>
+
+      </view>
+      <view class='hontbtn-bottom' wx:if='{{item.user_join_activity == null}}' catchtap='tapateCad' data-only-fans='{{item.onlyFans}}' data-index="{{idx}}">立即参与</view>
+      <view class='hontbtn-bottom1' wx:else data-only-fans='{{item.onlyFans}}' data-index="{{idx}}" catchtap='toActivityDetail'>已参加</view>
+    </view>
+  </view>
+  <!-- 上拉加载 -->
+  <view wx:if='{{!isRefreshing}}' class="weui-loadmore">
+    <view wx:if='{{isLoadingMoreData}}'>
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore-tips">正在加载更多...</view>
+    </view>
+    <!-- <view wx:elif='{{!isLoadingMoreData&&hasMoreData}}'>
+            <view class="weui-loadmore-tips" bindtap='onReachBottom'>点击加载更多</view>
+          </view> -->
+    <view wx:elif='{{!hasMoreData}}'>
+      <view class="weui-loadmore-tips">没有更多内容啦</view>
+    </view>
+  </view>
+</view>
+<modal show="{{showModal}}" height='65%' bindcancel="modalCancel" bindconfirm='modalConfirm'>
+  <view class='modal-buju-top'>
+    <text class='modal-choujiang'>口令抽奖</text>
+    <input class='modal-input' placeholder='输入抽奖口令' bindinput='publicCommandInput'></input>
+    <button class='hot-btn' bindtap='unlockPrize'>解锁抽奖</button>
+    <view class='huoquchoujiang'>
+      <text class='modal-huoqushuomin'>口令获取说明</text>
+      <text class='modal-huoneirong'>{{current_data.promptMsg}}</text>
+    </view>
+    <view class='ctiontop'>
+      <view class='ctiontoptop' selectable='true'>{{current_data.publicName}}</view>
+      <view class='ctiontopleft' bindtap='copyBtn' style='display: flex;  align-items: center;  justify-content: center;'>复制</view>
+    </view>
+  </view>
+</modal>

@@ -1,0 +1,150 @@
+<!--pages/wishResults/wishResults.wxml-->
+
+<view class='wishresults-top'>
+  <view class='acticitetheme'>
+    <!-- mode="aspectFit"  -->
+    <view class='wishresults'>
+      <image class='wishresults-img' mode='aspectFill' src='{{fileServer+detail.themeAddr}}' catchtap='clikeImg' data-src='{{fileServer+detail.themeAddr}}'></image>
+    </view>
+    <view class='wishresults-tiaojian'>
+      <view>
+        <text class='activityTheme'>{{detail.activityTheme}}</text>
+      </view>
+      <view class='beihoudegushiacr'>{{detail.creativityExplain}}</view>
+      <view class='actidacyu'>参与条件：
+        <text wx:if='{{detail.onlyFans==1}}' class='text-tiaojian'>需要输入口令</text>
+        <text wx:if='{{detail.need_help==1}}' class='text-tiaojian'>需要{{detail.help_num}}人助力</text>
+        <text wx:if='{{detail.onlyFans!=1 && detail.need_help !=1}}'>暂无条件</text>
+      </view>
+      <view>
+        <text class='actitheme-renshu' wx:if='{{detail.openPrizeCon==2}}'>参与人数达到{{detail.openDescribe}}人时自动开奖</text>
+        <text class='actitheme-renshu' wx:elif='{{detail.openPrizeCon==1}}'>{{detail.openDescribe}} 自动开奖</text>
+        <text class='actitheme-renshu' wx:else>活动发起人手动开奖</text>
+      </view>
+
+
+    </view>
+    <view class='wishresults-toptext'>
+      <text class='activityementext faqize'>活动发起者</text>
+      <text class='activityementext'>{{detail.nick_name}}</text>
+    </view>
+  </view>
+  <view class='zhuyishixiang' wx:if="{{detail.digest != null || detail.digest != ''}}">
+    <image class='imagee-wishResults' src='../../assets/img/neirong/yinhao1.png'></image>
+    {{detail.digest}}
+  </view>
+  <view class="weui-tab">
+    <view class="weui-navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'active' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title {{activeIndex == index ? 'active1' : ''}}">{{item}}</view>
+        </view>
+      </block>
+    </view>
+    <view class="weui-tab__panel">
+      <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+        <view class='weui-tab__content-no' wx:if='{{detail.has_Prize == 0}}'>
+          很遗憾这次你没有达成心愿名单!
+        </view>
+        <view class='weui-tab__content-yes' wx:else>
+          <view class='weui-tab__content-yesxinyuan'>恭喜你，达成旅行心愿！</view>
+          <view class='weui-tab__content-yesneirong'>{{detail.currentPrize.wish_name}}心愿：
+            <text>{{detail.currentPrize.wish_content}}</text>{{detail.currentPrize.prize_name}}</view>
+          <view class='lianxishangjiadianpou'>请尽快联系品牌赞助商，领取心愿礼物。</view>
+        </view>
+        <view class='weui-tab__content-btn'>
+          <view class='weui-tab__content-btnleft xiaojingix' wx:if='{{detail.has_Prize == 0}}'>发现小惊喜</view>
+          <view class='weui-tab__content-btnleft xiaojingixaaa' catchtap='flauntWish' wx:else>炫耀一下</view>
+          <view class='weui-tab__content-btnleft canjiagengduo' catchtap='canyuhuoDong'> 参与更多心愿活动</view>
+        </view>
+      </view>
+      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+        <view wx:for="{{detail.activity_wish_list}}" wx:key="{{item.index}}" wx:for-item="wish_list">
+          <view class='wishres-ul'>
+            <view class='wishres-ulimgaa'>
+              <image class='wishres-ulimgsrc' src='{{fileServer+wish_list.icon}}'></image>
+            </view>
+            <text class='wishres-ul-li'>{{wish_list.wishName}}</text>
+            <text class='wishres-ul-li2'><text>心愿{{idnex}}:{{wish_list.prizeName}}</text>×{{wish_list.prizeNum}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="navbar">
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+  </view>
+  <!--达成心愿名单-->
+  <view hidden="{{currentTab !=0}}" class='cautabarcenter'>
+    <view class='swiper_con' wx:for='{{wishData}}' wx:key='{{item.id}}'>
+      <view class='dachengxinyaunwish'>
+        <view class='dachengxinyaunwish-left'>
+          <text class='dacewisright'>{{item.wishName}}</text>
+          <text class='xinayuansss'>心愿：</text>
+        </view>
+        <view class='dachengxinyaunwish-right'>
+          <text class='wishresuit-ip'>{{item.prizeName}}</text>
+        </view>
+      </view>
+      <view class='wishresultsimglist'>
+        <image wx:for='{{prizeDetail}}' wx:for-item="prize" wx:key='{{prize.id}}' wx:for-index="itemIdx" wx:if='{{prize.activityWishListId==item.id}}' class='wishresultsimglist-image' src='{{prize.avatar_url}}'></image>
+      </view>
+    </view>
+    <!-- <view class='wisretext' bindtap='winningMore'>
+      查看更多
+      <text> </text>
+    </view> -->
+  </view>
+
+  <!--活动介绍-->
+  <view hidden="{{currentTab!==1}}" class='cautabarcenter'>
+    <!-- {{detail.detail_content}} -->
+    <text class='weijiazai' wx:if="{{detail.detail_content == ''}}">未添加活动详情</text>
+    <view class='weui-active'>
+      <view class='wishresu-active' wx:for="{{detail.detail_content}}" wx:key="{{item}}">
+        <text wx:if="{{item.type == '0'}}">{{item.info}}</text>
+        <view class='wishitemimg' wx:if="{{item.type == '1'}}">
+          <image mode='aspectFit' class='itemimage' src='{{item.info}}'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class='we-actithmebottom'>
+    <view class='we-avtimebottom-top'>已有
+      <text>{{joinData.length}}</text>人参与，
+      <text class='chankanquanbusuoyou' catchtap='viewMore'>查看全部  \t></text>
+    </view>
+    <view class='we-actimebottom-img'>
+      <view class='we-actimebottomimg-ul' wx:for='{{joinData}}' wx:key='{{item.id}}'>
+        <image class='we-actimebottomimg-li-img' src='{{item.imgAddr}}'></image>
+      </view>
+
+    </view>
+  </view>
+
+
+</view>
+<modal show="{{showModal}}" height='60%' bindcancel="modalCancel" bind:cofom="manaGement"></modal>
+
+<flaunt show="{{handModal}}" height='65%' bindcancel="modalCancel" bindconfirm='modalConfirm'>
+  <view class='modal-wish-top'>
+    <view class='wish-modal'>
+      <image class='wish-modal-img' src='../../assets/img/neirong/xiaolian.png'></image>
+    </view>
+    <view class='wish-modalname'>独乐乐不如众乐乐</view>
+    <view class='wish-histmodal'>邀请大家一起玩儿才够意思</view>
+
+    <button class='wish-histmodal-peng' open-type="share" catchtap='onShareAppMessage'>
+      <image src='../../assets/img/neirong/weixin.png'></image>
+      <text>发送至好友、微信群</text>
+    </button>
+    <view class='wish-tupianshengcheng' catchtap="wishCanvas">
+      <image src='../../assets/img/neirong/tupian.png'></image>
+      <text>生成分享图</text>
+    </view>
+  </view>
+</flaunt>

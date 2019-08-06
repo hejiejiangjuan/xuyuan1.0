@@ -1,0 +1,70 @@
+/* pages/impower/impower.wxss */
+
+.select-top {
+  display: block;
+  padding: 30rpx 34rpx;
+  font-size: 30rpx;
+  color: #999999;
+}
+
+.impower-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+   padding: 30rpx 34rpx;
+}
+
+.impower-images {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.impower-images image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.impower-right-top {
+  font-size: 34rpx;
+}
+
+.impower-uer {
+  font-size: 28rpx;
+  color: #999999;
+}
+.impower-right{
+  margin-left: 30rpx;
+  font-size: 34rpx;
+}
+
+.impoer-add {
+  width: 100%;
+  font-size: 32rpx;
+  background: #ffffff;
+  margin-top: 25rpx;
+  display: flex;
+  align-items: center;
+  padding: 30rpx 34rpx;
+}
+
+.impower-add-right {
+  margin-left: 30rpx;
+  font-size: 32rpx;
+  color: #4682b4;
+  font-weight: 600;
+}
+
+.impower-addimg {
+  width: 70rpx;
+  height: 70rpx;
+  font-size: 32rpx;
+  /* margin: 0 10rpx; */
+}
+
+.impower-addimg image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}

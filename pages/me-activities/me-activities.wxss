@@ -1,0 +1,145 @@
+/* pages/me-activities/me-activities.wxss */
+
+.me-founding-bottom-btn3 {
+  width: 180rpx;
+  height: 65rpx;
+  font-size: 28rpx;
+  background: #e64542;
+  color: #ffffff;
+  /* margin: 6% 0; */
+  text-align: center;
+  line-height: 65rpx;
+  border-radius: 10rpx;
+}
+.me-founding-bottom-btn2{
+   width: 180rpx;
+  height: 65rpx;
+  font-size: 28rpx;
+   text-align: center;
+  line-height: 65rpx;
+  background: #cccccc;
+  color: #ffffff;
+
+}
+.me-founding-bottom-btn{
+   min-width: 180rpx;
+  min-height: 80rpx;
+  font-size: 28rpx;
+  background: #EE9572;
+  color: #ffffff;
+  margin: 6% 0;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+
+}
+.me-activties {
+  width: 95%;
+  background: #ffffff;
+  margin: 30rpx auto;
+  padding: 0 32rpx;
+  box-shadow: 0 0 2px rgba(0, 0, 255, 0.144);
+  border-radius: 4px;
+}
+
+.me-activtes-top {
+  width: 100%;
+  display: flex;
+  padding: 32rpx 0;
+}
+
+.me-activtes-top-img {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}
+
+.me-activtestopimg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.me-activtes-top-right {
+  width: 80%;
+  padding-left: 20rpx;
+}
+
+.me-activtes-top-topneme {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shangjiamingchenmeactves {
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.position {
+  font-size: 28rpx;
+  color: #989898;
+}
+
+.me-activtes-topdata {
+  font-size: 26rpx;
+  color: #989898;
+}
+
+.me-activtestext {
+  padding-left: 20rpx;
+}
+
+.me-activtestextska {
+  color: #576b95;
+}
+
+.activeimage {
+  width: 100%;
+  height: 400rpx;
+}
+
+.me-activtes-img {
+  width: 100%;
+  height: 100%;
+}
+
+.me-activtes-bottom {
+  width: 100%;
+}
+
+.me-activtes-nottom-name {
+  width: 100%;
+  font-size: 30rpx;
+  /* font-weight: 600; */
+  padding: 15rpx 15rpx;
+}
+
+.me-activtes-botton-dongtai {
+  width: 100%;
+  padding-bottom: 34rpx;
+
+}
+.myBtns{
+  width: 100%;
+  /* border: 1px solid black; */
+  display: flex;
+ justify-content: flex-end;
+}
+
+.me-activtes-bottomp {
+  width: 100%;
+  color: #a1a1a1;
+  font-size: 26rpx;
+  padding:0 15rpx;
+}
+
+.me-activtes-botton-btn {
+  width: 30%;
+  height: 70rpx;
+  font-size: 34rpx;
+  text-align: center;
+  line-height: 70rpx;
+  margin-top: 26rpx;
+  background: #a9a9a9;
+}

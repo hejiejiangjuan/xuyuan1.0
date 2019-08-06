@@ -1,0 +1,97 @@
+<!--index.wxml-->
+<modal show="{{showModal}}" height='60%'  bind:cofom="manaGement">
+</modal>
+<view class="we-index">
+  <view class='we-index-center'>
+    <view class="we-navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="we-nabbar-top {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+    </view>
+    <view class="indexnavbar">
+      <view class="weui-tab__content" >
+        <!-- 下拉刷新动画 -->
+        <view class="weui-loadmore" wx:if='{{isRefreshing}}'>
+          <view class="weui-loading"></view>
+          <view class="weui-loadmore-tips">正在刷新...</view>
+        </view>
+        <!-- 列表循环 -->
+        <view class='we-index-list' wx:for="{{list}}" wx:key="{{item.id}}">
+          <view class='we-index-list-top'>
+            <view wx:if="{{item.img == ''}}"></view>
+            <view wx:else class='index-imgeles'>
+              <image class='we-index-topimg' src='{{item.imgAddr}}'></image>
+            </view>
+            <view class='we-index-name'>
+              <view class='we-index-name-top'>
+                <text class='we-indexname'>{{item.nickName}}</text>
+                <view class='we-indexposition' wx:if="{{item.city}}">{{item.city}}</view>
+                <view class='we-indexposition' wx:elif="{{item.province}}">{{item.province}}</view>
+                <view wx:else>
+                  <text class='we-indexposition'>{{item.position}}</text>
+                </view>
+              </view>
+              <view class='we-index-name-bottom'>
+                <text class='we-indexdate'>{{item.createDateStr}}</text>
+                <text wx:if="{{item.activityId}}" class='we-xinxin'>来自 <text class='we-indexlaizi'>{{item.activityName}}</text> </text>
+              </view>
+            </view>
+          </view>
+          <view class='we-index-title'>
+            <view class='we-index-ul' wx:for="{{item.wishListStr}}" wx:for-item="wishListStr" wx:key="{{wishListStr}}">
+              <view class='we-index-ul-img'>
+                <image class='imgui' src='{{fileServer+wishListStr.icon}}'></image>
+              </view>
+              <text class='lingsiyinji'></text>
+             <view class="we-indextext-li"> {{wishListStr.wishContent}}</view>
+            </view>
+            <!-- <view wx:if="{{item.moning == ''}}"></view>
+            <view wx:else>
+
+              <view class='we-index-ul zijin'>
+                达成愿望所需要的金额
+              </view>
+              <view class='we-index-ul zijinnumber'>
+                {{item.moning}}元
+              </view>
+
+            </view> -->
+            <view class='makewish-neirong'>背后的故事</view>
+            <view class="we-index-ul guship1 {{ item.flag ? 'unellipsis' : 'ellipsis'}}">{{item.story}}</view>
+            <view class='we-indexzhankai'>
+              <view class='we-zhanshou' data-idx="{{ index }}" bindtap='showRule'>
+                <text class="{{ item.flag ? 'zhankaisqindex' : ''}}">展开</text>
+                <text class="{{ item.flag ? '' : 'zhankaisqindex'}}">收起</text>
+                <image class='zhankaishouqi' src="{{item.flag ? '/assets/img/neirong/shouqi.png' : '/assets/img/neirong/zankai.png'}}"></image>
+              </view>
+              <view class='zhici' catchtap='dianZanzhichi' data-idx="{{ index }}">
+                <image class='zhiciimg' src="{{item.isSurport==1 ? '/assets/img/neirong/zan1.png' : '/assets/img/neirong/zan.png'}}"></image>
+                <text class="{{ item.isSurport==1 ? 'zhiciindex2222' : 'zhiciindex'}}">支持</text>
+                <text class="{{ item.isSurport==1 ? 'zhiciindex111' : 'zhiciindex2222'}}">已支持</text>
+                <text class="index-naubare {{ item.isSurport==1 ? 'zhiciindex333' : ''}}">{{item.supportNum}}</text>
+              </view>
+              
+            </view>
+          </view>
+        </view>
+        <!-- 上拉加载 -->
+        <view wx:if='{{!isRefreshing}}' class="weui-loadmore">
+          <view wx:if='{{isLoadingMoreData}}'>
+            <view class="weui-loading"></view>
+            <view class="weui-loadmore-tips">正在加载更多...</view>
+          </view>
+          <view wx:elif='{{!isLoadingMoreData&&hasMoreData}}'>
+            <view class="weui-loadmore-tips" bindtap='onReachBottom'>点击加载更多</view>
+          </view>
+          <view wx:elif='{{!hasMoreData}}'>
+            <view class="weui-loadmore-tips">没有更多内容啦</view>
+          </view>
+        </view>
+
+      </view>
+      <!-- <view class="weui-tab__content" hidden="{{activeIndex !=1 }} "></view> -->
+    </view>
+  </view>
+</view>

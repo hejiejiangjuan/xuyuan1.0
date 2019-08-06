@@ -1,0 +1,243 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.5",
+	"appid": "wx5b681c27811cf32f",
+	"projectname": "wish",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"list": [
+				{
+					"id": -1,
+					"name": "admin",
+					"pathName": "pages/admin/admin",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "热门",
+					"pathName": "pages/hot/hot",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "参与许愿",
+					"pathName": "pages/takepart/takepart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "参与许愿卡片",
+					"pathName": "pages/takecard/takecard",
+					"query": "joinId=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "发起活动",
+					"pathName": "pages/active/active",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "选择心愿类型",
+					"pathName": "pages/elect/elect",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "活动简介",
+					"pathName": "pages/imput/input",
+					"query": "id=132&lastUserId=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "照片",
+					"pathName": "pages/upload/upload",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "许下心愿",
+					"pathName": "pages/makewish/makewish",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/me/me",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的-发起的活的",
+					"pathName": "pages/founding/founding",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "活动主题",
+					"pathName": "pages/activitytheme/activitytheme",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的---实现的心愿",
+					"pathName": "pages/realizewish/realizewish",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的---许下的心愿",
+					"pathName": "pages/me-makewish/me-makewish",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的---参加的活动",
+					"pathName": "pages/me-activities/me-activities",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 17,
+					"name": "开奖结果",
+					"pathName": "pages/wishResults/wishResults",
+					"query": "activityId=1000008",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "查看更多--头像显示",
+					"pathName": "pages/picturesDisplay/viewMore/viewMore",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "画板",
+					"pathName": "pages/takecard/takecard.js",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 21,
+					"name": "生成图片",
+					"pathName": "pages/canvas/canvasPhone/canvasPhone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "参与活动",
+					"pathName": "pages/joinActivity/joinActivity",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 21,
+					"name": "授权页面",
+					"pathName": "pages/impower/impower",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "授权页面",
+					"pathName": "pages/irole/irole",
+					"query": "弹框",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "授权",
+					"pathName": "pages/iadmin/iadmin",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "参加活动的页面",
+					"pathName": "pages/joinActivity/joinActivity",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "参加活动后跳转的页面",
+					"pathName": "pages/takecard/takecard",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "嵌入公众号的页面",
+					"pathName": "pages/embeddedCanvas/embeddedCanvas",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "活动详情",
+					"pathName": "pages/activitytheme/activitytheme",
+					"query": "id=132",
+					"scene": null
+				}
+			]
+		}
+	}
+}

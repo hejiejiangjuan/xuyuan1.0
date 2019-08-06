@@ -1,0 +1,107 @@
+/* pages/businessCooperation/businessCooperation.wxss */
+/* .businessCooperation{
+  width: 80%;
+  height: 60%;
+  margin: 30rpx auto;
+  text-align: center;
+  background: #ffffff;
+} */
+.businessCooperation{
+  width: 90%;
+  height:173rpx;
+  overflow: hidden;
+  background-color: white;
+  margin: 20rpx auto;
+  padding:10rpx 0;
+  position: relative;
+ border-radius: 3px;
+ box-shadow: 0 0 2px rgba(0, 0, 0, 0.274);
+
+}
+.xia{
+position: absolute;
+top: 112rpx;
+right:20rpx;
+}
+.xia1{
+  display: none
+}
+.clicStyle{
+   width: 90%;
+  height:auto;
+  background-color: white;
+  margin: 20rpx auto;
+  transition: 05s
+}
+.busTitle{
+  font-weight:600;
+  font-size: 16px;
+  margin-left: 10rpx;
+  width: 90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  
+}
+.busTitle1{
+   font-weight:600;
+  font-size:16px;
+  margin-left: 10rpx;
+  width: 90%;
+  
+}
+.busContent{
+font-size:15px;
+padding-left: 30rpx;
+width: 89%;
+border: 1px solid rgba(0, 0, 0, 0);
+color: #727272;
+height: 30px;
+overflow: hidden
+
+}
+.busContent1{
+font-size:15px;
+padding: 10rpx 20rpx 10rpx 30rpx;
+width:100%;
+color: #727272;
+height: auto;
+/* border: 1px solid black */
+
+}
+
+.logo{
+  width:20px;
+  height:20px;
+  border-radius:50% 50%;
+  overflow: hidden;
+  position: relative;
+}
+.logo>image{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.businessContent{
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx 20rpx;
+  flex-wrap: wrap;
+}
+.contIcon{
+  /* border: 1px solid black; */
+  width:40rpx;
+  background-color: white;
+  position: absolute;
+  top:90rpx;
+  right:30rpx
+}
+.contIcon1{
+  /* border: 1px solid black; */
+  width:40rpx;
+  background-color: white;
+  position: absolute;
+  top:90rpx;
+  right:30rpx;
+  display: none;
+}

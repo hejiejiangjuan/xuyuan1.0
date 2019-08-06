@@ -1,0 +1,62 @@
+<!--pages/me-makewish/me-makewish.wxml-->
+<!-- 下拉刷新动画 -->
+<view class="weui-loadmore" wx:if='{{isRefreshing}}'>
+  <view class="weui-loading"></view>
+  <view class="weui-loadmore-tips">正在刷新...</view>
+</view>
+<view class='me-makewish' wx:for="{{myWishDetailList}}" wx:key="{{index}}">
+  
+  <view class='me-makewish-top'>
+  <view class='imgaddr'><image src="{{item.imgAddr}}"></image> </view>
+   <view class='imgtitlee'>
+    <view class='me-makewish-topname'>
+      <view class='me-makewish-nametitle'>{{item.nickName}}</view>
+      <view class='me-makewish-position' wx:if="{{item.city}}">{{item.city}}</view>
+      <view class='me-makewish-position' wx:elif="{{item.province}}">{{item.province}}</view>
+    </view>
+    <view class='me-makewish-way'>
+      <text class='me-makewish-time'>{{item.createDateStr}}</text>
+      <text class='me-makewish-waytext' wx:if="{{item.activityName}}">来自<text class='me-makewishwaytext'>{{item.activityName}}</text></text>
+    </view>
+   </view>
+  </view>
+  <view class='me-makewish-ul' wx:for="{{item.wishListStr}}" wx:for-item="wishListStr" wx:key="{{wishListStr}}">
+    <view class='me-makewish-img'>
+      <image class='me-makewish-imgimg' src='{{fileServer+wishListStr.icon}}'></image>
+    </view>
+    <text class='lingsiyinji'></text>
+    <view class="me-makewish-text">心愿：{{wishListStr.wishContent}}</view>
+  </view>
+
+  <view class='me-makewish-neirong'>
+    背后的故事
+  </view>
+  <view class="me-makewish-p guship1 {{ item.flag ? 'unellipsis' : 'ellipsis'}}">
+    {{item.story}}
+  </view>
+  <view class='me-makewish-bottom'>
+    <view class='zhankai' data-idx="{{ index }}"  bindtap='showRule'>
+      <view  class="{{ item.flag ? 'zhankaisqindex' : ''}}">展开</view>
+      <view  class="{{ item.flag ? '' : 'zhankaisqindex'}}">收起</view>
+      <!-- <image src='../../assets/img/neirong/zankai.png'></image> -->
+      <image style="width: 20px;height: 20px;" src="{{item.flag ? '/assets/img/neirong/shouqi.png' : '/assets/img/neirong/zankai.png'}}"></image>
+    </view>
+    <view class='me-makewish-zhichi'>
+      <view class='zhicitexit'>支持数</view>
+      <text class='index-naubare'>{{item.supportNum}}</text>
+    </view>
+  </view>
+</view>
+<!-- 上拉加载 -->
+<view wx:if='{{!isRefreshing}}' class="weui-loadmore">
+  <view wx:if='{{isLoadingMoreData}}'>
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore-tips">正在加载更多...</view>
+  </view>
+  <view wx:elif='{{hasMoreData}}'>
+    <view class="weui-loadmore-tips" bindtap='onReachBottom'>点击加载更多</view>
+  </view>
+  <view wx:else>
+    <view class="weui-loadmore-tips">没有更多内容啦</view>
+  </view>
+</view>

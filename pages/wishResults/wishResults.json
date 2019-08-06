@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "开奖结果",
+  "usingComponents": {
+    "modal": "../../components/login-modal/modal",
+    "flaunt": "../../components/modal/modal"
+  }
+}

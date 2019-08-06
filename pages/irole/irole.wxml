@@ -1,0 +1,34 @@
+<!--pages/irole/irole.wxml-->
+<text class='select-top'>对希望生效的公众号来说：</text>
+<view class='selice'>
+  <radio-group bindchange="radioChange">
+    <label class="weui-cell weui-check__label" wx:for="{{radioItems}}" wx:key="value">
+      <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}" />
+
+      <view class="weui-cell__bd">{{item.name}}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+        <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+      </view>
+    </label>
+  </radio-group>
+</view>
+
+<view class='text-cells' wx:if="{{detalvue == '1'}}">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">
+      <textarea class="weui-textarea" placeholder="请输入文本" style="height: 3.3em" />
+      <view class="weui-textarea-counter">0/200</view>
+    </view>
+  </view>
+</view>
+
+<button class='btn-shouquan' wx:if="{{detalvue == '0'}}">申请授权</button>
+<button class='btn-shouquan' wx:else bindtap="modileTakue">申请授权</button>
+<view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}">
+  <view class="zan-dialog__mask" bindtap="toggleDialog" />
+  <view class="zan-dialog__container">
+    <view class='zan-dlodingtitle'>提示  <text class='guagbi' bindtap='removeGb'>x</text></view>
+    <view class='zan-p'>需要公众号管理员进行授权，授权通过前可先发起抽奖，授权通过后功能可用。</view>
+    <view class='yaoqingshouquan' bindtap='toadmin'>邀请管理员授权</view>
+  </view>
+</view>

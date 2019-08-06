@@ -1,0 +1,25 @@
+<!--pages/businessCooperation/businessCooperation.wxml-->
+<!-- <view class='businessCooperation'>
+  <view>商家名：xxxxx</view>
+  <view>地址：xxxxxxxx</view>
+  <view>联系电话：138xxxxxxxx</view>
+</view> -->
+<block wx:for='{{dataContent}}' wx:key='dataContent.id'wx:for-item="item" wx:for-index="idx">
+
+  <view class="businessCooperation {{item.status?'clicStyle':'businessCooperation'}}" data-index='{{idx}}' catchtap='openContent' >
+    <view class='businessContent'>
+      <view class='logo'>
+        <image src='{{item.logo}}'></image>
+      </view>
+      <view class="{{item.status?'busTitle1':'busTitle'}}"  data-index='{{idx}}'>{{item.title}}</view>    
+    </view>
+    <view class="{{item.status?'busContent1':'busContent'}}" data-index='{{idx}}'>{{item.content}}</view>
+    <view class="{{item.status?'contIcon1':'contIcon'}}" data-index='{{idx}}'>
+      <image src='/assets/img/neirong/jiantou.png'></image>
+    </view>
+    <view>
+      <image class="{{item.status?'xia1':'xia'}}" style='width:25rpx;height:25rpx;' src='/assets/img/neirong/xia.png'></image>
+    </view>
+  </view>
+
+ </block>

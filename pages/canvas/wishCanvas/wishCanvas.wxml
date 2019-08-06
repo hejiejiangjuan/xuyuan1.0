@@ -1,0 +1,8 @@
+<!--pages/themeCanvas/themeCanvas.wxml-->
+<scroll-view scroll-y class='content-share' style="height:{{scrolHeight}}px">
+  <canvas style="width: 100%; height:{{screenHeight}}px; background:#ffffff;" canvas-id="secondtoCanvas" binderror="canvasIdErrorCallback"></canvas>
+
+</scroll-view>
+<view class='foot-button'>
+  <button bindtap='saveImg'>保存卡片</button>
+</view>

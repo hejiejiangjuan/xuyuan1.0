@@ -1,0 +1,23 @@
+<!--components/modal/modal.wxml-->
+<view class='mask' wx:if='{{show}}'>
+  <view class='modal-content' style='height:{{height}}'>
+    <!-- <scroll-view scroll-y class='main-content'>
+      <slot>
+       ass看了阿萨德积分
+      </slot>
+    </scroll-view> -->
+    <view class='loginmodel-center'>
+      <view class='login-modeal-name'>
+        <view class='loginmodeal-img'>
+          <image class='loginmodeal-imagesrc' src='../../assets/img/logo/heidou.png'></image>
+        </view>
+        <view class='modale-name'>许愿日历</view>
+      </view>
+      <view class='login-p'>
+        你暂未授权许愿日历小程序获取你的信息，将无法正常使用小程序的功能。如需要正常使用，请点击“授权”按钮，允许头像，昵称等信息的授权.
+      </view>
+      <button class='login-modale-btn' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" >授权登录</button>
+    </view>
+
+  </view>
+</view>

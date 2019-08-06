@@ -1,0 +1,151 @@
+<!--pages/makewish/makewish.wxml-->
+<view class='makewish-center page'>
+  <view class='makewish-top'>
+    <text class='makewishtop-liuxian'>留下您的心愿</text>
+    <!-- <text class='makewishtop-shuoming'>一次最多可留下六个心愿</text> -->
+  </view>
+
+  <view class="page__bd">
+    <!-- <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">错误提示</view> -->
+
+    <view class='tianjiaxinyuan' wx:for="{{info}}" wx:key="id">
+      <view class='tinajixinyuan-ul' >
+        <textarea class="we-textareaul" placeholder="请输入心愿30字内" maxlength='30' id='{{index}}' value='{{item.wishContent}}' bindinput='wishContentInput' ></textarea>
+        <view class='we-tiajia-right' id="{{index}}" >
+          <!-- <image class="we-tianright-img {{!item.chooseType.icon?'on':''}}" src='../../assets/img/neirong/zhuanshi.png'></image> -->
+          <image class="we-tianright-img " src='{{fileServer+item.chooseType.icon}}'></image>
+          <view class='we-tiajia-rightview'>
+            <view class=" {{item.chooseType.wishName?'titlexinyuanBlock':'titlexinyuanFlex'}}" >
+              <text class='titlexinyuanBlockText'>{{item.chooseType.wishName}}</text>
+              <!-- <text class='genghuan'>更换</text> -->
+            </view>
+          </view>
+        </view>
+        <!-- <image class='tinajixinyuan-ul-remove' src='../../assets/img/neirong/sanchu.png' id="{{index}}" catchtap='remove'></image> -->
+      </view>
+    </view>
+    <!-- <view class='tianjiajiangleixun' bindtap='insert'>
+      +增加心愿类型
+    </view> -->
+
+    <!-- <view class='makewish-weidate'>
+      <text class='makewish-ming'>达成愿望所需的金额区间</text>
+      <view class='makewish-date'>
+        <input class='makewish-input' type='text' placeholder='请输入金额范围'></input>
+      </view>
+    </view> -->
+
+    <view class="makewish-weidate">
+      <text class='makewish-ming'>想要心愿达成时间</text>
+      <view class='makewish-date'>
+
+        <view class="dateint">
+          <view class="datetitle-tart">
+            时间：
+          </view>
+          <view class="datetart-xuanze">
+            <picker mode="date" value="{{date}}" start="{{dateStart}}"  bindchange="bindDateChange">
+              <view >{{date}}</view>
+            </picker>
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+
+    <view class="weui-cells__title">心愿背后的故事</view>
+    <view class="weui-celljoin-textarea">
+         <textarea class="weui-textarea" placeholder="请输入文本..." style="height: 3.3em" maxlength='500' bindinput="bindText" value='{{storyInput}}'/>
+          <view class="weui-textarea-counter">{{t_length}}/500</view>
+      </view>
+
+      <view class='titletext'>你的心愿被选中时,我们将通过微信号通知你</view>
+     <view class='wx-code'>
+        <view class="cellsTitle">留下你的微信号
+         
+        </view>
+        <input class='joininput' placeholder="请输入微信..." maxlength='30' value='{{wxNum}}' bindinput="bindWxinput"/>
+      </view>
+        
+
+
+
+    <!-- <view class='makewnameswitch'>
+      <view class='we-swichtop'>
+        <view class="weui-cell__bd">更换昵称
+        </view>
+
+        <view class="weui-cell__ft">
+          <switch color="#09bb07" checked="{{pseu}}" bindchange="pseuDony"></switch>
+        </view>
+      </view>
+      <view class=" {{pseu ? '':'on'}}">
+        <view class="takaaa">
+          <view class="takaaa-tart">
+            昵称：
+          </view>
+          <view class="takaaa-xuanze">
+            <input class='makewnameswitchaaa' placeholder='昵称' value='{{randomName}}' bindinput='bindNickNameInput'></input>
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+
+    <view class='makewnameswitch'>
+      <view class='we-swichtop'>
+        <view class="weui-cell__bd">更换头像
+        </view>
+
+        <view class="weui-cell__ft">
+          <switch color="#09bb07" checked="{{titleImg}}" bindchange="titleImgswitch" />
+        </view>
+      </view>
+      <view hidden="{{!titleImg}}">
+        <view class="touxiangtitle">
+          <view class="datetitle-tart">
+            头像：
+          </view>
+          <view class="touxiangtitle-xuanze">
+            <view class='shangchuantouxiang'>
+              <image class='imgtoo' src='{{fileServer+randomImg}}'></image>
+            </view>
+          </view>
+          <view class='imgxuanz'>
+            <image class='imgxuanz-img' src='../../assets/img/neirong/touxiang.png' bindtap="upload"></image>
+          </view>
+        </view>
+      </view>
+    </view> -->
+
+
+    <view class="weui-jion_select">
+        <view class="jionposition">地区</view>
+        <view class="weui-join__bd" bindtap='clickArea'>
+          <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{selectArea}}" range-key="{{'name'}}" bindcancel="bindcancel">
+            <view class="tui-picker-detail">
+              {{selectArea[0][multiIndex[0]].name}}{{selectArea[1][multiIndex[1]].name?'-'+selectArea[1][multiIndex[1]].name:''}}
+            </view>
+          </picker>
+        </view>
+      </view>
+    <view class='we-swichtop'>
+      <view class="weui-cell__bd">同步至星海
+      </view>
+      <view class="weui-cell__ft">
+        <switch color="#e64542" checked="{{ishish}}" bindchange="isHish" />
+      </view>
+    </view>
+
+    <view class="weui-btn-area">
+    <view class="weui-btn btnaaa" bindtap="submitWish"> 参与活动 </view>
+     
+    </view>
+
+    <city-picker id="city-picker" value="{{cityPickerValue}}" isShow="{{cityPickerIsShow}}" bindsureclick="cityPickerOnSureClick" bindcancelclick="cityPickerOnCancelClick" />
+  </view>
+
+
+</view>

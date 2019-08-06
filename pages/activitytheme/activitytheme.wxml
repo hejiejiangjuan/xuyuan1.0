@@ -1,0 +1,172 @@
+<!--pages/activitytheme/activitytheme.wxml-->
+<!-- 初入弹出框 -->
+<modal show="{{showModal}}" height='60%' bind:cofom="manaGement"></modal>
+
+<view class='activitytheme-top'>
+  <view class='acticitetheme'>
+    <!-- mode="aspectFit"  -->
+    <view class='actitheme'>
+      <image class='actitheme-img' mode='aspectFill' src='{{fileServer+detail.themeAddr}}' catchtap='clickImg' data-src='{{fileServer+detail.themeAddr}}'></image>
+    </view>
+    <view class='actitheme-tiaojian'>
+      <view>
+        <text class='actithemeTite'>{{detail.activityTheme}}</text>
+      </view>
+       <view class='beihoudegushiacr'>{{detail.creativityExplain}}</view>
+      <view class='actidacyu' wx:if='{{detail.onlyFans ==1 || detail.need_help ==1}}'>参与条件：
+        <text wx:if='{{detail.onlyFans==1}}'  class='text-tiaojian'>需要输入口令</text>
+        <text wx:if='{{detail.onlyFans!=1 && detail.need_help==1}}'  class='text-tiaojian'>需要{{detail.help_num}}人助力</text>
+      </view>
+     
+      <view>
+        <text class='actitheme-renshu' wx:if='{{detail.openPrizeCon==2}}'>参与人数达到{{detail.openDescribe}}人时自动开奖</text>
+        <text class='actitheme-renshu' wx:elif='{{detail.openPrizeCon==1}}'>{{detail.openDescribe}} 自动开奖</text>
+        <text class='actitheme-renshu' wx:else>活动发起人手动开奖</text>
+      </view>
+      
+      
+    </view>
+    <view class='activitytheme-toptext'>
+      <text class='activityementext faqize'>活动发起者</text>
+      <text class='activityementext'>{{detail.nick_name}}</text>
+    </view>
+  </view>
+  <view class='zhuyishixiang' wx:if="{{detail.digest != ''}}">
+    <image class="imagee-wishResults" src='../../assets/img/neirong/yinhao1.png'></image>
+    {{detail.digest}}
+  </view>
+  <view class='zhuyisixiang'>
+    <view class='zhuyisixiang-center'  wx:if='{{detail.onlyFans ==1}}'>
+      <view class='zhuyisixiang-centert-name'>{{detail.publicName}}</view>
+      <view class='zhuyisixiang-centert-title'>口令提示：{{detail.promptMsg}}</view>
+      <view class='zhuyisixiang-centert-biaoqian'>{{detail.publicName}}</view>
+      <view class='zhuyisixiang-centert-btn' bindtap='copyBtn'>点击复制</view>
+    </view>
+    <view wx:if='{{detail.userId==useramin && detail.openPrizeCon == 3}}'>
+      <view class='lotteryBtn' wx:if='{{detail.openPrize == 0}}'>
+        <view class='lotteryText' catchtap='openLotter'>立即开奖</view>
+      </view>
+      <view class='lotteryBtn' wx:else>
+        <view class='lotteryText lotteryText1'>已开奖</view>
+      </view>
+    </view>
+  </view>
+
+
+
+  <view class="weui-tab">
+    <view class="weui-navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__itemccc' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title">
+            <view class='active-weui-navba'>{{item}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="weui-tab__panel">
+
+      <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+        <text class='weijiazai' wx:if="{{detail.detail_content == ''}}">未添加活动详情</text>
+        <view class='weui-active'>
+
+          <view class='wishresu-active' wx:for="{{detail.detail_content}}" wx:key="{{item}}">
+            <text wx:if="{{item.type == '0'}}">{{item.info}}</text>
+            <view wx:if="{{item.type == '1'}}" class='wishitemimg'>
+              <image mode='aspectFit' class='itemimage' src='{{item.info}}' catchtap='activCliekImg' data-src='{{item.info}}'></image>
+              <!-- mode='aspectFill' -->
+            </view>
+          </view>
+
+        </view>
+      </view>
+      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+        <view wx:for="{{detail.activity_wish_list}}" wx:key="{{item.index}}" wx:for-item="wish_list">
+          <view class='theme-ul'>
+            <view class='theme-ulimgaa'>
+              <image class='theme-ulimgsrc' src='{{fileServer+wish_list.icon}}'></image>
+            </view>
+            <text class='theme-ul-li'>{{wish_list.wishName}}</text>
+            <text class='shuxian'>|</text>
+            <text class='theme-ul-li2'><text>心愿{{idnex}}:{{wish_list.prizeName}}</text>×{{wish_list.prizeNum}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='we-actithmebottom'>
+    <view class='we-avtimebottom-top'>已有
+      <text>{{detail.join_num}}</text>人参与
+      <text class='chankanquanbusuoyou' catchtap='viewMore' hidden='{{detail.join_num==0}}'>  查看全部  \t></text>
+    </view>
+    <view class='we-actimebottom-img'>
+      <view class='we-actimebottomimg-ul' wx:for='{{detail.user_join_activity}}' wx:key='{{item.id}}'>
+        <image class='we-actimebottomimg-li-img' src='{{item.imgAddr}}'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='acticityheme-botton' wx:if="{{detail.status!=4}}">
+    <button class='fenxianghaoyou' bindtap="powerDrawer" data-statu="open" wx:if='{{detail.share==1||getUserId==detail.userId}}'>分享给好友</button>
+    <button class='fenxianghaoyou'  data-statu="open" wx:else='{{detail.share==0}}'>未开启分享</button>
+    <button class='fenxianghaoyou lijicanyu' catchtap='joinActivity' wx-if="{{detail.has_join == 0}}">立即参与</button>
+    <button class='fenxianghaoyou' wx:else catchtap='goActivity'>已参加</button>
+  </view>
+
+</view>
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+  <view class="drawer_content">
+    <!-- <text class='cardguanbi-toptext'>分享可获得助力哦！</text> -->
+    <view class='cardmodal'>
+      <view class='cardmodal-img'>
+        <button class='cardtext' open-type="share">
+          <image class='model-image' src='/assets/img/neirong/fxtp.png'></image>
+          
+        </button>
+        <text class='model-imgimg'>发送给朋友</text>
+      </view>
+      <view class='cardmodal-img'>
+        <button class='cardtext' bindtap="activeCanvas">
+          <image class='model-image' src='/assets/img/neirong/bctp.png'></image>
+         
+        </button>
+         <text class='model-imgimg'>保存分享图片</text>
+      </view>
+       <view class='cardmodal-img'>
+        <button class='cardtext' bindtap="embedded">
+          <image class='model-image' src='/assets/img/neirong/qrgzh.png'></image>
+         
+        </button>
+         <text class='model-imgimg'>嵌入公众号</text>
+      </view>
+      <view class='cardmodal-img'>
+        <button class='cardtext' open-type='contact' bindtap="theLink" send-message-title="主题活动" send-message-img="{{fileServer+detail.themeAddr}}" show-message-card="true" send-message-path="true">
+          <image class='model-image' src='/assets/img/neirong/lianjie.png'></image>
+          
+        </button>
+        <text class='model-imgimg'>复制链接</text>
+      </view>
+
+    </view>
+
+    <view class='removemodel' bindtap="powerDrawer" data-statu="close"> 取消</view>
+  </view>
+</view>
+<lock show="{{showCommand}}" height='60%' bindcancel="modalCancel" bindconfirm='modalConfirm'>
+  <view class='modal-buju-top'>
+    <text class='modal-choujiang'>口令抽奖</text>
+    <input class='modal-inputthem' placeholder='输入抽奖口令' bindinput='publicCommandInput'></input>
+    <button class='hot-btn' bindtap='unlockPrize'>解锁抽奖</button>
+    <view class='huoquchoujiang'>
+      <text class='modal-huoqushuomin'>口令获取说明</text>
+      <text class='modal-huoneirong'>{{detail.promptMsg}}</text>
+    </view>
+    <view class='ctiontop'>
+      <view class='ctiontoptop' selectable='true'>{{detail.publicName}}</view>
+      <view class='ctiontopleft' bindtap='copyBtn'>复制</view>
+    </view>
+  </view>
+</lock>

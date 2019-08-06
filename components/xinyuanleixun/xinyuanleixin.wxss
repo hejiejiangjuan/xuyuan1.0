@@ -1,0 +1,98 @@
+/* components/xinyuanleixun/xinyuanleixin.wxss */
+.active-xuanzexinyuan{
+  width: 100%;
+  margin-top: 35rpx;
+  background: #ffffff;
+}
+.xuanzexinyuantop{
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1px solid #cccc;
+  font-size: 34rpx;
+  line-height: 100rpx;
+  padding: 0 32rpx;
+  display: flex;
+  justify-content:space-between;
+}
+.xuanzexinyuantop-right{
+  padding-right: 40rpx;
+  display: flex;
+}
+.shiwu{
+  padding: 0 20rpx;
+}
+.weui-bar__item_on{
+  color: #10aeff;
+  border-bottom: 1px solid #10aeff;
+}
+.xuanzesdf{
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content:space-between;
+  align-item:center;
+  
+  width: 100%;
+  height: 90rpx;
+  border-bottom: 1px solid #cccc;
+  font-size: 30rpx;
+  line-height: 90rpx;
+  padding:0rpx 32rpx;
+}
+.leftimglove{
+  width: 50%;
+  height: 100%;
+  line-height: 90rpx;
+  display: flex;
+}
+.xuanzeinmg1{
+  width: 50rpx;
+  height: 50rpx;
+  margin:20rpx 10rpx;
+}
+.img-aming{
+  width: 50rpx;
+  height: 50rpx;
+  margin:20rpx 0rpx;
+}
+.xuanzeinmg{
+  width: 30rpx;
+  height: 30rpx;
+  margin: 5% 0;
+}
+.xuanzelove{
+  display: block;
+  margin-left: 10rpx;
+}
+.jiangpinmingc{
+  width: 100%;
+  height: 90rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #cccc;
+  font-size: 32rpx;
+  line-height: 90rpx;
+  padding: 0 32rpx;
+  display: flex;
+  justify-content:space-between;
+}
+.iontxinyuanjiang{
+  width: 43%;
+  height: 90rpx;
+  margin-left: 10rpx;
+}
+.jiangpinnauber{
+  width: 100%;
+  height: 90rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #cccc;
+  font-size: 32rpx;
+  line-height: 90rpx;
+  padding: 0 32rpx;
+  display: flex;
+  justify-content:space-between;
+}
+.jiangpinnauber3{
+  width: 43%;
+  height: 90rpx;
+  margin-left: 10rpx;
+}

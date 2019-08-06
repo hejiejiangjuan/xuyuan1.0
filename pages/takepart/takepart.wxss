@@ -1,0 +1,247 @@
+/* pages/makewish/makewish.wxss */
+
+.makewish-center{
+  width: 100%;
+}
+.makewish-top{
+  width: 100%;
+  height: 100rpx;
+  margin-top: 30rpx;
+  padding: 0 34rpx;
+}
+.makewishtop-liuxian{
+  display: block;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.makewishtop-shuoming{
+  font-size: 26rpx;
+  color:#9e9e9e;
+}
+
+.tianjiaxinyuan{
+  width: 100%;
+  min-height: 60rpx;
+  background: #ffffff;
+}
+.tinajixinyuan-ul{
+  width: 100%;
+  min-height: 60rpx;
+  display: flex;
+  align-content: center;
+  padding: 8rpx 34rpx;
+  /* margin: 10rpx 0; */
+  border-bottom: 1px solid #cccccc;
+}
+.we-textareaul{
+  display: block;
+  width: 64%;
+  height: 80rpx;
+  font-size: 28rpx;
+  border-right: 1px solid #9e9e9e;
+  padding-left: 10rpx;
+}
+.we-tiajia-right{
+  width: 37%;
+  /* height: 100%; */
+  /* line-height: 80rpx; */
+  display: flex;
+}
+.tianjiajiangleixun {
+  width: 100%;
+  height: 90rpx;
+  /* margin-top: 20rpx; */
+  background: #ffffff;
+  /* border-top: 1px solid #cccccc; */
+  border-bottom: 1px solid #cccccc;
+  font-size: 32rpx;
+  line-height: 90rpx;
+  padding: 0 32rpx;
+  text-align: center;
+  color: #10aeff;
+}
+.we-tianright-img{
+  width: 55rpx;
+  height: 55rpx;
+  margin: 10rpx 20rpx;
+  border-radius: 50%;
+}
+.titlexinyuan{
+  display: block;
+  min-width: 55rpx;
+  text-align: center;
+  /* line-height: 55rpx; */
+  font-size: 28rpx;
+  font-weight: 600;
+}
+.we-tiajia-rightview{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.genghuan{
+  display: block;
+  font-size: 28rpx;
+  font-weight: normal;
+  color: #7f7f7f;
+}
+.makewnameswitch{
+  margin-top: 20rpx;
+  background: #ffffff;
+}
+.makewish-weidate{
+  width: 100%;
+  margin-top: 60rpx;
+  /* padding: 10rpx 34rpx; */
+  background: #ffffff;
+}
+.makewish-date{
+  width: 100%;
+  padding: 20rpx 34rpx;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+.makewish-ming{
+  display: block;
+  padding: 20rpx 34rpx;
+}
+.dateint{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  line-height: 80rpx;
+}
+.makewish-input{
+  width: 100%;
+  height: 80rpx;
+   line-height: 80rpx;
+   padding: 0 34rpx;
+}
+.datetitle-tart{
+  width: 20%;
+  height: 100%;
+  text-align: center;
+}
+.datetart-xuanze{
+  width: 60%;
+  height: 100%;
+}
+.wx-code{
+margin-top: 20px;
+background: white;
+}
+.backStory{
+  background-color: white;
+  margin-top: 26rpx;
+}
+
+.weui-cells__title{
+  font-size: 32rpx;
+  color: black;
+  /* margin-top: 50rpx; */
+  margin: 0;
+  padding-top: 20rpx;
+}
+.weui-cells__titletext{
+  font-size: 24rpx;
+  color: #9e9e9e;
+  padding: 0 34rpx;
+}
+.we-swichtop{
+  width: 100%;
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 34rpx;
+  background: #ffffff;
+}
+.xiaozi{
+  font-size: 24rpx;
+  color: #9e9e9e;
+}
+.makewnameswitchaaa{
+  height: 100%;
+  font-size: 28rpx;
+}
+.on{
+  display: none;
+}
+.weui-select{
+  text-align: center;
+}
+.takaaa{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+   line-height: 80rpx;
+   border-top: 1px solid #cccccc;
+   border-bottom: 1px solid #cccccc;
+}
+.takaaa-tart{
+  width: 20%;
+  height: 100%;
+  text-align: center;
+}
+.takaaa-xuanze{
+  width: 60%;
+  height: 100%;
+}
+.touxiangtitle{
+  width: 100%;
+  /* height: 80rpx; */
+  display: flex;
+   line-height: 100rpx;
+   padding: 10rpx 0;
+   border-top: 1px solid #cccccc;
+   border-bottom: 1px solid #cccccc;
+}
+.touxiangtitle-xuanze{
+  width: 60%;
+  height: 100%;
+}
+.shangchuantouxiang{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  float: right;
+}
+.imgtoo{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.imgxuanz{
+  width: 60rpx;
+  height: 60rpx;
+  margin: 2% auto;
+}
+.imgxuanz-img{
+  width: 100%;
+  height: 100%;
+}
+.wecellsto{
+  margin-top: 20rpx;
+}
+
+.btnaaa{
+  background: #09bb07;
+}
+
+.tui-picker-detail{
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #ffffff;
+  font-size: 35rpx;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.tinajixinyuan-ul-remove{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 0;
+}
+.acaaa{
+  line-height: 2;
+}

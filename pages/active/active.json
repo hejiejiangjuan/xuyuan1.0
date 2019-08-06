@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "发起活动",
+  "usingComponents": {
+    "xinyuanleixin": "../../components/xinyuanleixun/xinyuanleixin",
+    "my-date": "../../components/date/index"
+  }
+}

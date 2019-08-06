@@ -1,0 +1,7 @@
+<!--pages/imput/input.wxml-->
+<!-- <view class="section">
+  <form  class="fromaaa" bindsubmit="bindFormSubmit">
+    <textarea class='abcda' auto-height placeholder="form 中的 textarea" name="textarea"/>
+    <button class='btnokwanc' form-type="submit"> 提交 </button>
+  </form>
+</view> -->

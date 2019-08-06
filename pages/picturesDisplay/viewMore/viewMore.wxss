@@ -1,0 +1,35 @@
+/* pages/picturesDisplay/viewMore/viewMore.wxss */
+.viewmore{
+  width: 95%;
+  height: 100%;
+  margin: 20rpx auto;
+  padding: 34rpx;
+  background: #ffffff;
+}
+.vieworeh1{
+  font-size: 35rpx;
+  padding: 15rpx 0;
+  margin: 15rpx 0;
+  border-bottom: 1px solid #cccccc;
+}
+.viewmoreimage{
+  width: 80rpx;
+  height: 80rpx;
+  float: left;
+  position: relative;
+}
+.viewmoreimage-img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.seeMore{
+  width: 100rpx;
+  position: absolute;
+  top: 5rpx;
+  right: -40rpx;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #576b95;
+}

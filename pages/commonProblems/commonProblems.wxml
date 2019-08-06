@@ -1,0 +1,7 @@
+<!--pages/commonProblems/commonProblems.wxml-->
+<block wx:for='{{dataContent}}' wx:key='item.id' wx:for-item='item'>
+  <view class='commonProblem'>
+   <view class='problemTitle'>{{item.title}}</view>
+   <view class='problemContent'>{{item.content}}</view>
+  </view>
+</block>

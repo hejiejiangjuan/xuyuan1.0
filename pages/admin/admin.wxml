@@ -1,0 +1,23 @@
+<!--pages/admin/admin.wxml-->
+<view wx:if="{{isShow}}">
+  <view class="container">
+  <view class="userinfo">
+    <view class='header'>
+      <image src='/assets/img/logo/logo.png'></image>
+    </view>
+
+    <view class='content'>
+      <view>申请获取以下权限</view>
+      <text>获得你的公开信息(昵称，头像等)</text>
+    </view>
+    <button  class='bottom' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <!-- <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+    </block>
+  </view>
+  <view class="usermotto">
+    <!-- <text class="user-motto">{{motto}}</text> -->
+  </view>
+</view>
+</view>

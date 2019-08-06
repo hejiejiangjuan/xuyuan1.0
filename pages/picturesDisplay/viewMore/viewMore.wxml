@@ -1,0 +1,16 @@
+<!--pages/picturesDisplay/viewMore/viewMore.wxml-->
+<view class='viewmore'>
+  <view class='vieworeh1' wx:if='{{imgList.length>0}}'>抽奖参与用户</view>
+  <view class='viewmoreimage' wx:for="{{imgList}}" wx:key="{{item}}">
+    <image class='viewmoreimage-img' src='{{item.imgAddr}}'></image>
+  </view>
+
+   <view class='vieworeh1' wx:if='{{prizeList.length>0}}'>中奖的用户</view>
+  <view class='viewmoreimage' wx:for="{{prizeList}}" wx:key="{{item}}">
+    <image class='viewmoreimage-img' src='{{item.avatar_url}}'></image>
+  </view>
+   <!-- <view class='viewmoreimage' hidden="{{hidden}}">
+    <view class='seeMore' catchtap='seeMore'>查看更多></view>
+  </view> -->
+  
+</view>

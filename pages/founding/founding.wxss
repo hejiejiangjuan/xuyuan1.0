@@ -1,0 +1,136 @@
+/* pages/founding/founding.wxss */
+
+.me-founding {
+  width: 95%;
+  margin: 34rpx auto;
+  background: #ffffff;
+  box-shadow: 0 0 2px rgba(0, 0, 255, 0.089);
+  border-radius: 4px;
+}
+
+.me-founding-top {
+  width: 100%;
+  padding: 30rpx 30rpx;
+  display: flex;
+}
+
+.me-founding-img {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.me-founding-topright {
+  width: 80%;
+  margin-left: 20rpx;
+}
+
+.me-topright-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.me-founding-name {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.me-founding-position {
+  font-size: 26rpx;
+}
+
+.me-toright-bottom {
+  font-size: 22rpx;
+}
+
+.me-toright-toptext {
+  padding-left: 26rpx;
+  color: #727272;
+}
+
+.me-torighttoptext {
+  color: #676b95;
+}
+
+.me-founding-center {
+  width: 100%;
+  height: 400rpx;
+  padding: 0 32rpx;
+}
+
+.me-founding-centeri-img {
+  width: 100%;
+  height: 100%;
+}
+
+.me-founting-left {
+  /* width: calc(100% - 20rpx); */
+}
+
+.me-founding-bottom {
+  width: 100%;
+  padding: 20rpx 34rpx;
+  /* padding:21rpx 34rpx 75rpx 34rpx; *//* display: flex; */
+  align-items: space-between;
+}
+
+.me-founding-bottomname {
+  font-size: 30rpx;
+  padding: 13rpx 15rpx;
+}
+
+.me-founding-p {
+  color: #727272;
+  font-size: 26rpx;
+  padding:0 15rpx;
+}
+
+.me-founding-bottom-btn {
+  /* width: 30%; */
+  width: 182rpx;
+  height: 65rpx;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 65rpx;
+  background: #ee9572;
+  color: #fff;
+  float: right;
+}
+
+.me-founding-bottom-btn2 {
+  /* width: 30%; */
+  width: 182rpx;
+  height: 65rpx;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 65rpx;
+  background: #e64542;
+  color: #fff;
+  /* padding:1px; */
+  float: right;
+}
+
+.me-founding-bottom-btn3 {
+  /* width: 30%; */
+  width: 182rpx;
+  height: 65rpx;
+  font-size: 34rpx;
+  text-align: center;
+  line-height: 65rpx;
+  background: #ccc;
+  color: #fff;
+  float: right;
+}
+
+.me-toright-time {
+  color: #727272;
+}
+
+.btnxuyuanabt {
+  width: 100%;
+  height: 76rpx;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding: 30rpx 20rpx;
+}

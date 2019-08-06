@@ -1,0 +1,60 @@
+<!--pages/founding/founding.wxml-->
+
+<!-- 下拉刷新动画 -->
+<view class="weui-loadmore" wx:if='{{isRefreshing}}'>
+  <view class="weui-loading"></view>
+  <view class="weui-loadmore-tips">正在刷新...</view>
+</view>
+<view class='me-founding' wx:for="{{createActivityList}}" wx:key="{{index}}"  id='{{item.id}}'  catchtap='toActivityDetail'>
+  <view class='me-founding-top'>
+    <image class='me-founding-img' src='{{fileServer+item.logo}}' wx:if="{{item.logo!=null&&item.logo!=''}}"></image>
+    <view class='me-founding-topright'>
+      <view class='me-topright-top'>
+        <text class='me-founding-name'>{{item.activityTheme}}</text>
+        <!-- <text class='me-founding-position'>星球</text> -->
+      </view>
+      <view class='me-toright-bottom'>
+        <text class='me-toright-time'>{{item.beforeTime}}</text>
+        <text class='me-toright-toptext'>来自<text class='me-torighttoptext'>{{item.nick_name}}</text></text>
+      </view>
+    </view>
+  </view>
+  <view class='me-founding-center'>
+    <image class='me-founding-centeri-img' mode="aspectFill" src='{{fileServer+item.themeAddr}}' catchtap='cliekImg' data-src='{{fileServer+item.themeAddr}}'></image>
+  </view>
+  <view class='me-founding-bottom'>
+    <view class='me-founting-left'>
+      <view class='me-founding-bottomname'>
+        {{item.creativityExplain}}
+      </view>
+      <view class='me-founding-p'>
+        {{item.digest}}
+      </view>
+    </view>
+    <view class='btnxuyuanabt'>
+      <view>
+        <button class='me-founding-bottom-btn' wx:if='{{item.status==2&&item.openPrize==1}}' id='{{item.id}}' catchtap="toOpenPrizeRet">已开奖</button>
+        <button class='me-founding-bottom-btn2' wx:elif='{{item.status==1&&item.openPrize==0}}'>进行中</button>
+        <button class='me-founding-bottom-btn3' wx:elif='{{item.status==4}}'>待审核</button>
+        <button class='me-founding-bottom-btn3' wx:else>已过期</button>
+      </view>
+    </view>
+
+
+    <!-- <button class='me-founding-bottom-btn' wx:if='{{item.openPrize==0}}'>进行中</button>
+    <button class='me-founding-bottom-btn2' wx:if='{{item.openPrize==1}}'>已过期</button> -->
+  </view>
+</view>
+<!-- 上拉加载 -->
+<view wx:if='{{!isRefreshing}}' class="weui-loadmore">
+  <view wx:if='{{isLoadingMoreData}}'>
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore-tips">正在加载更多...</view>
+  </view>
+  <view wx:elif='{{hasMoreData}}'>
+    <view class="weui-loadmore-tips" bindtap='onReachBottom'>点击加载更多</view>
+  </view>
+  <view wx:else>
+    <view class="weui-loadmore-tips">没有更多内容啦</view>
+  </view>
+</view>

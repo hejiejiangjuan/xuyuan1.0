@@ -1,0 +1,19 @@
+<!--pages/impower/impower.wxml-->
+<text class='select-top'>选择已授权公众号</text>
+<view class='impower-top'>
+  <view class='impower-images'>
+    <image src='http://5b0988e595225.cdn.sohucs.com/images/20180720/9787561c8eaf42ddadb5a4e297c94838.jpeg'></image>
+  </view>
+  <view class='impower-right'>
+    <view class='impower-right-top'>黑豆亲子</view>
+    <view class='impower-uer'>管理员</view>
+  </view>
+</view>
+<view class='impoer-add' bindtap='toIrole'>
+   <view class='impower-addimg'>
+    <image src='../../assets/img/neirong/tianjia123.png'></image>
+  </view>
+  <view class='impower-add-right'>
+    添加新授权
+  </view>
+</view>

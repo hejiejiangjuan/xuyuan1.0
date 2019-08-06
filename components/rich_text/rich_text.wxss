@@ -1,0 +1,48 @@
+.input_view{
+  padding: 10px;
+  width: 100%;
+  font-size: 32rpx;
+}
+.input_view2{
+  padding: 10px;
+  width: 100%;
+  font-size: 32rpx;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.img_view{
+  display: flex;
+  position: relative;
+  padding: 4px;
+  align-items: flex-start;
+}
+.img_view image{
+  width: 100%;
+  height: 100%;
+}
+.close_img{
+  position: absolute;
+  right: 10px;
+  top:-15px;
+}
+.add-img {
+  display: flex;
+  background-size:cover;
+  position:fixed;
+  right:74rpx;
+  bottom:140px;
+}
+.save{
+  display: flex;
+  background-size:cover;
+  position:fixed;
+  right:74rpx;
+  bottom:70px;
+}
+.circle_center_view{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0px 0px 1px 1px #cdcdcd;
+}

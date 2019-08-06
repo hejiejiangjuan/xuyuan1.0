@@ -1,0 +1,79 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/admin/admin",
+    "pages/hot/hot",
+    "pages/makewish/makewish",
+    "pages/active/active",
+    "pages/me/me",
+    "pages/founding/founding",
+    "pages/takecard/takecard",
+    "pages/elect/elect",
+    "pages/comentelect/comentelect",
+    "pages/upload/upload",
+    "pages/imput/input",
+    "pages/richtext_demo/richtext_demo",
+    "pages/joinActivity/joinActivity",
+    "pages/activitytheme/activitytheme",
+    "pages/realizewish/realizewish",
+    "pages/me-makewish/me-makewish",
+    "pages/me-activities/me-activities",
+    "pages/wishResults/wishResults",
+    "pages/picturesDisplay/viewMore/viewMore",
+    "pages/canvas/canvasPhone/canvasPhone",
+    "pages/canvas/themeCanvas/themeCanvas",
+    "pages/canvas/wishCanvas/wishCanvas",
+    "pages/businessCooperation/businessCooperation",
+    "pages/commonProblems/commonProblems",
+    "pages/impower/impower",
+    "pages/irole/irole",
+    "pages/iadmin/iadmin",
+    "pages/embeddedCanvas/embeddedCanvas"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#d45147",
+    "navigationBarTitleText": "许愿日历",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 10
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#fa541c",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "assets/img/tabbar/xin.png",
+        "selectedIconPath": "assets/img/tabbar/xin1.png",
+        "text": "星海"
+      },
+      {
+        "pagePath": "pages/hot/hot",
+        "iconPath": "assets/img/tabbar/re.png",
+        "selectedIconPath": "assets/img/tabbar/re1.png",
+        "text": "热门"
+      },
+      {
+        "pagePath": "pages/makewish/makewish",
+        "iconPath": "assets/img/tabbar/xu.png",
+        "selectedIconPath": "assets/img/tabbar/xu1.png",
+        "text": "许心愿"
+      },
+      {
+        "pagePath": "pages/active/active",
+        "iconPath": "assets/img/tabbar/huo.png",
+        "selectedIconPath": "assets/img/tabbar/huo1.png",
+        "text": "发起活动"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "assets/img/tabbar/me.png",
+        "selectedIconPath": "assets/img/tabbar/me1.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
+}

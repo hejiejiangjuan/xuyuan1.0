@@ -1,0 +1,33 @@
+.content-share{
+  
+}
+
+canvas {
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+}
+
+.foot-button {
+  height: 60px;
+  width: 100%;
+  background: #d75e49;
+  position: absolute !important;
+  bottom: 0;
+  left: 0;
+
+}
+
+.foot-button button {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 100rpx;
+  width: 580rpx;
+  height: 84rpx;
+  position: absolute;
+  top: 50%;
+  margin-top: -42rpx;
+  left: 50%;
+  margin-left: -290rpx;
+  font-size: 32rpx;
+  color: #fff;
+  line-height: 84rpx;
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "心愿卡",
+  "usingComponents": {
+    "modal": "../../components/login-modal/modal"
+  }
+}
